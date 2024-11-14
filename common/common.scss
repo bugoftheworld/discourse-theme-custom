@@ -277,12 +277,21 @@ sup {
   }
 }
 
-.signature-preferences .signatures .d-editor-textarea-column {
-  min-width: 50%;
+#user-content {
+  .user-preferences .form-vertical {
+    width: 100%;
+  }
+
+  .signature-preferences .signatures .d-editor-textarea-column {
+    min-width: 70%;
+  }
+  .signature-preferences .signatures .d-editor-textarea-column textarea.d-editor-input {
+    height: 80%;
+    min-height: 100px;
+  }
 }
-.signature-preferences .signatures .d-editor-textarea-column textarea.d-editor-input {
-  height: 100%;
-}
+
+
 
 
 @import "custom-search-banner-customizations";
