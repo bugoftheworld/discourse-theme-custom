@@ -276,6 +276,15 @@ sup {
     }
   }
 }
+
+.signature-preferences .signatures .d-editor-textarea-column {
+  min-width: 50%;
+}
+.signature-preferences .signatures .d-editor-textarea-column textarea.d-editor-input {
+  height: 100%;
+}
+
+
 @import "custom-search-banner-customizations";
 @import "custom-content";
 @import "custom-footer";
