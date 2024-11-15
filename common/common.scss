@@ -281,12 +281,15 @@ sup {
   .user-preferences .form-vertical {
     width: 100%;
   }
+  .signature-preferences .signatures .d-editor-container {
+    display: block;
 
+  }
   .signature-preferences .signatures .d-editor-textarea-column {
-    min-width: 70%;
+    height: 200px;
   }
   .signature-preferences .signatures .d-editor-textarea-column textarea.d-editor-input {
-    height: 80%;
+    height: 200px;
     min-height: 100px;
   }
 }
