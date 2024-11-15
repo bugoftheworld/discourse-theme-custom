@@ -286,10 +286,11 @@ sup {
 
   }
   .signature-preferences .signatures .d-editor-textarea-column {
-    height: 200px;
+    height: 300px;
   }
   .signature-preferences .signatures .d-editor-textarea-column textarea.d-editor-input {
-    height: 200px;
+    height: 300px;
+    max-height: 80%;
     min-height: 100px;
   }
 }
