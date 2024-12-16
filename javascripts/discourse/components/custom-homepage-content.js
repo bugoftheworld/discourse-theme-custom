@@ -49,8 +49,7 @@ export default class CustomHomepageContent extends Component {
             };
 
             api.onPageChange(() => {
-                let userStatus = checkUserLoggedIn();
-                userStatus ? console.log('User is logged in') : console.log('User is not logged in');
+                checkUserLoggedIn();
             });
         });
     }
