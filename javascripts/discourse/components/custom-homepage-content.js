@@ -37,10 +37,10 @@ export default class CustomHomepageContent extends Component {
                         if (data.status === "connected") {
                             // User is logged in
                         } else {
-                            console.log('User is not logged in');
-                            //logout user
                             let CURRENTUSER = api.getCurrentUser();
-                            CURRENTUSER.destroySession();
+                            if (CURRENTUSER){
+                                CURRENTUSER.destroySession();
+                            }
                         }
                     })
                     .catch((error) => {
