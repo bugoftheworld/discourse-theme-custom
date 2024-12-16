@@ -21,7 +21,9 @@ export default class CustomHomepageContent extends Component {
         withPluginApi("0.8.18", (api) => {
             this.api = api;
 
-            const checkUserLoggedIn = () => {
+            window.checkUserLoggedIn = false;
+
+            const userLoggedInStatus = () => {
                 fetch('https://account.qnap.com/oauth/login_status', {
                     method: 'POST',
                     headers: {
@@ -37,7 +39,7 @@ export default class CustomHomepageContent extends Component {
                         if (data.status === "connected") {
                             // User is logged in
                         } else {
-                            let CURRENTUSER = api.getCurrentUser();
+                            const CURRENTUSER = api.getCurrentUser();
                             if (CURRENTUSER){
                                 CURRENTUSER.destroySession();
                             }
@@ -49,7 +51,10 @@ export default class CustomHomepageContent extends Component {
             };
 
             api.onPageChange(() => {
-                checkUserLoggedIn();
+                if(!window.checkUserLoggedIn){
+                    userLoggedInStatus();
+                    window.checkUserLoggedIn = true;
+                }
             });
         });
     }
