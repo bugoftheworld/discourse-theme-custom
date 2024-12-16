@@ -38,7 +38,8 @@ export default class CustomHomepageContent extends Component {
                             // User is logged in
                         } else {
                             console.log('User is not logged in');
-                            this.api.logout();
+                            //logout user
+                            api.destroySession();
                         }
                     })
                     .catch((error) => {
