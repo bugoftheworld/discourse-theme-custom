@@ -50,13 +50,7 @@ export default class CustomHomepageContent extends Component {
 
             api.onPageChange(() => {
                 let userStatus = checkUserLoggedIn();
-                userStatus.then((result) => {
-                    if (result === false) {
-                        // this.api.logout();
-                        // console.log('User is not logged in');
-                        console.log('Done');
-                    }
-                });
+                userStatus ? console.log('User is logged in') : console.log('User is not logged in');
             });
         });
     }
