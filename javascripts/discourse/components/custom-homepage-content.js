@@ -39,7 +39,8 @@ export default class CustomHomepageContent extends Component {
                         } else {
                             console.log('User is not logged in');
                             //logout user
-                            api.destroySession();
+                            let CURRENTUSER = api.getCurrentUser();
+                            CURRENTUSER.destroySession();
                         }
                     })
                     .catch((error) => {
