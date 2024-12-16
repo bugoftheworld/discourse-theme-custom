@@ -20,6 +20,44 @@ export default class CustomHomepageContent extends Component {
 
         withPluginApi("0.8.18", (api) => {
             this.api = api;
+
+            const checkUserLoggedIn = () => {
+                fetch('https://account.qnap.com/oauth/login_status', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        app_id: '668ce78379a25e1282cf47e2'
+                    }),
+                    credentials: 'include'
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === "connected") {
+                            // User is logged in
+                            console.log('User is logged in');
+                            return true;
+                        } else {
+                            console.log('User is not logged in');
+                            return false;
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+            };
+
+            api.onPageChange(() => {
+                let userStatus = checkUserLoggedIn();
+                userStatus.then((result) => {
+                    if (result === false) {
+                        // this.api.logout();
+                        // console.log('User is not logged in');
+                        console.log('Done');
+                    }
+                });
+            });
         });
     }
 
