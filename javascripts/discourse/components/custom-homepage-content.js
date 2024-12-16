@@ -36,11 +36,9 @@ export default class CustomHomepageContent extends Component {
                     .then(data => {
                         if (data.status === "connected") {
                             // User is logged in
-                            console.log('User is logged in');
-                            return true;
                         } else {
                             console.log('User is not logged in');
-                            return false;
+                            this.api.logout();
                         }
                     })
                     .catch((error) => {
