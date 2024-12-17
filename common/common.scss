@@ -247,9 +247,11 @@ sup {
         }
         .search-menu {
             animation: fadeInDown .5s ease-in .6s forwards;
+            z-index: 1;
         }
         .status-content {
             animation: fadeInDown .5s ease-in .8s forwards;
+            z-index: 0;
         }
     }
   }
