@@ -253,9 +253,7 @@ export default {
             }
 
             const siteStatus = document.getElementById("siteStatus");
-            if (domain === "https://community.qnap.com") {
-                siteStatus.innerText = "Beta";
-            } else {
+            if (domain !== "https://community.qnap.com") {
                 siteStatus.innerText = "Testing";
             }
         });
