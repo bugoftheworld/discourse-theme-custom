@@ -298,7 +298,7 @@ sup {
 }
 
 // fix display flickering issue https://community.qnap.com/t/forum-display-bug/476
-body.mobile-view #topic-progress-wrapper {
+html.mobile-view #topic-progress-wrapper {
   display: none;
 }
 
