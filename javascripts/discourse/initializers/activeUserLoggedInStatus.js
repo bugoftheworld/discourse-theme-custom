@@ -7,9 +7,11 @@ export default {
         withPluginApi("0.8.7", (api) => {
             api.onPageChange(() => {
                 userLoggedInStatus(api);
+                console.log("testing Page changed");
             });
             api.onAppEvent("post-stream:posted", () => {
                 userLoggedInStatus(api);
+                console.log("testing posted");
             });
         });
     },
