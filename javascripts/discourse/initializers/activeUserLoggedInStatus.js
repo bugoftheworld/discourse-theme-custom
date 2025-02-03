@@ -9,9 +9,9 @@ export default {
                 userLoggedInStatus(api);
                 console.log("open Page changed");
             });
-            api.onAppEvent("composer:replied", () => {
+            api.onAppEvent("postComposer:replied", () => {
                 userLoggedInStatus(api);
-                console.log("composer:replied");
+                console.log("postComposer:replied");
             });
         });
     },
