@@ -6,11 +6,11 @@ export default {
     initialize() {
         withPluginApi("0.8.18", (api) => {
             api.onPageChange(() => {
-                userLoggedInStatus();
+                userLoggedInStatus(api);
                 console.log("open Page changed");
             });
             api.onAppEvent("composer:opened", () => {
-                userLoggedInStatus();
+                userLoggedInStatus(api);
                 console.log("Composer opened");
             });
         });

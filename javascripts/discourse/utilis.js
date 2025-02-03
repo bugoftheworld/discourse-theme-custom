@@ -1,6 +1,4 @@
-import { api } from 'discourse-common/lib/api';
-
-const userLoggedInStatus = () => {
+const userLoggedInStatus = (api) => {
     fetch('https://account.qnap.com/oauth/login_status', {
         method: 'POST',
         headers: {
@@ -15,7 +13,7 @@ const userLoggedInStatus = () => {
         .then(data => {
             if (data.status !== "connected") {
                 const CURRENTUSER = api.getCurrentUser();
-                if (CURRENTUSER){
+                if (CURRENTUSER) {
                     CURRENTUSER.destroySession();
                 }
             }

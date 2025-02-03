@@ -26,7 +26,7 @@ export default class CustomHomepageContent extends Component {
 
             api.onPageChange(() => {
                 if(!window.checkUserLoggedIn){
-                    userLoggedInStatus();
+                    userLoggedInStatus(api);
                     window.checkUserLoggedIn = true;
                     console.log("Page changed");
                 }
