@@ -2,7 +2,7 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 import { userLoggedInStatus } from "discourse/utilis";
 
 export default {
-    name: "active-account",
+    name: "activeUserLoggedInStatus",
     initialize() {
         withPluginApi("0.8.18", (api) => {
             api.onPageChange(() => {
