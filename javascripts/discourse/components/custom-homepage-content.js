@@ -19,19 +19,19 @@ export default class CustomHomepageContent extends Component {
     constructor() {
         super(...arguments);
 
-        withPluginApi("0.8.18", (api) => {
-            this.api = api;
+        // withPluginApi("0.8.18", (api) => {
+        //     this.api = api;
 
-            window.checkUserLoggedIn = false;
+        //     window.checkUserLoggedIn = false;
 
-            api.onPageChange(() => {
-                if(!window.checkUserLoggedIn){
-                    userLoggedInStatus(api);
-                    window.checkUserLoggedIn = true;
-                    console.log("Page changed");
-                }
-            });
-        });
+        //     api.onPageChange(() => {
+        //         if(!window.checkUserLoggedIn){
+        //             userLoggedInStatus(api);
+        //             window.checkUserLoggedIn = true;
+        //             console.log("Page changed");
+        //         }
+        //     });
+        // });
     }
 
     get displayBlock() {
