@@ -2,7 +2,7 @@ import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
 import { defaultHomepage } from "discourse/lib/utilities";
 import { withPluginApi } from "discourse/lib/plugin-api";
-import { userLoggedInStatus } from "discourse/utilis";
+import { userLoggedInStatus } from "../utilis";
 
 export default class CustomHomepageContent extends Component {
     @service router;

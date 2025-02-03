@@ -1,5 +1,5 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-import { userLoggedInStatus } from "discourse/utilis";
+import { userLoggedInStatus } from "../utilis";
 
 export default {
     name: "activeUserLoggedInStatus",
