@@ -9,14 +9,9 @@ export default {
                 userLoggedInStatus(api);
                 console.log("open Page changed");
             });
-            api.modifyClass("controller:composer", {
-                actions: {
-                    send() {
-                        this._super(...arguments);
-                        userLoggedInStatus(api);
-                        console.log("composer:sent");
-                    }
-                }
+            api.onAppEvent("postComposer:replied", (post) => {
+                userLoggedInStatus(api);
+                console.log("User replied to a post:", post);
             });
         });
     },
