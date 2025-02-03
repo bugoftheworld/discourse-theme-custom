@@ -11,7 +11,7 @@ export default {
             });
             api.onAppEvent("postComposer:replied", (post) => {
                 userLoggedInStatus(api);
-                console.log("User replied to a post:", post);
+                console.log("postComposer:replied");
             });
         });
     },
