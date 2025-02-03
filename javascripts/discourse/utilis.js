@@ -1,4 +1,4 @@
-const userLoggedInStatus = (api) => {
+const userLoggedInStatus = () => {
     fetch('https://account.qnap.com/oauth/login_status', {
         method: 'POST',
         headers: {
@@ -12,8 +12,10 @@ const userLoggedInStatus = (api) => {
         .then(response => response.json())
         .then(data => {
             if (data.status !== "connected") {
+                // User is logged in
+            } else {
                 const CURRENTUSER = api.getCurrentUser();
-                if (CURRENTUSER) {
+                if (CURRENTUSER){
                     CURRENTUSER.destroySession();
                 }
             }
