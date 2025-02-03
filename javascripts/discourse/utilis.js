@@ -1,3 +1,5 @@
+import { api } from 'discourse-common/lib/api';
+
 const userLoggedInStatus = () => {
     fetch('https://account.qnap.com/oauth/login_status', {
         method: 'POST',
