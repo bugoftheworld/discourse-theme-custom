@@ -11,13 +11,13 @@ const userLoggedInStatus = () => {
     })
         .then(response => response.json())
         .then(data => {
-            const CURRENTUSER = api.getCurrentUser();
+            const CURRENTUSER = this.api?.getCurrentUser();
             console.log(CURRENTUSER);
             if (data.status === "connected") {
                 // User is logged in
             } else {
 
-                if (CURRENTUSER){
+                if (CURRENTUSER) {
                     CURRENTUSER.destroySession();
                 }
             }
@@ -27,4 +27,4 @@ const userLoggedInStatus = () => {
         });
 };
 
-export { userLoggedInStatus };
+export {userLoggedInStatus};
