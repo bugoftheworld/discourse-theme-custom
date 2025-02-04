@@ -11,7 +11,7 @@ const userLoggedInStatus = () => {
     })
         .then(response => response.json())
         .then(data => {
-            if (data.status !== "connected") {
+            if (data.status == "connected") {
                 // User is logged in
             } else {
                 const CURRENTUSER = api.getCurrentUser();
