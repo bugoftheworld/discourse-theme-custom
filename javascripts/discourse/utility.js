@@ -11,10 +11,12 @@ const userLoggedInStatus = () => {
     })
         .then(response => response.json())
         .then(data => {
+            const CURRENTUSER = api.getCurrentUser();
+            console.log(CURRENTUSER);
             if (data.status === "connected") {
                 // User is logged in
             } else {
-                const CURRENTUSER = api.getCurrentUser();
+
                 if (CURRENTUSER){
                     CURRENTUSER.destroySession();
                 }
