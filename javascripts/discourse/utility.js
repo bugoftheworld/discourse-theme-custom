@@ -17,9 +17,9 @@ const userLoggedInStatus = (api) => {
                 // User is logged in
             } else {
 
-                if (CURRENTUSER) {
-                    CURRENTUSER.destroySession();
-                }
+                // if (CURRENTUSER) {
+                //     CURRENTUSER.destroySession();
+                // }
             }
         })
         .catch((error) => {
