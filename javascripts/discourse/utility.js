@@ -12,14 +12,12 @@ const userLoggedInStatus = (api) => {
         .then(response => response.json())
         .then(data => {
             const CURRENTUSER = api.getCurrentUser();
-            console.log(CURRENTUSER);
             if (data.status === "connected") {
                 // User is logged in
             } else {
-
-                // if (CURRENTUSER) {
-                //     CURRENTUSER.destroySession();
-                // }
+                if (CURRENTUSER && window.location.origin === "https://community.qnap.com") {
+                    CURRENTUSER.destroySession();
+                }
             }
         })
         .catch((error) => {
