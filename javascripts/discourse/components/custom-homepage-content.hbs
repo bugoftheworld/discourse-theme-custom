@@ -1,7 +1,7 @@
-{{#if isHomepage}}
+{{#if this.isHomepage}}
   {{#if (eq this.args.blockType "block1")}}
     {{status}}
-    {{#if isUserLoggedIn}}
+    {{#if this.isUserLoggedIn}}
       {{cards}}
     {{else}}
       {{adduser}}
