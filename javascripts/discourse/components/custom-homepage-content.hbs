@@ -1,16 +1,16 @@
-{{#if this.isHomepage}}
+{{#if isHomepage}}
   {{#if (eq this.args.blockType "block1")}}
     {{status}}
-    {{#if this.isUserLoggedIn}}
-      {{this.cards}}
+    {{#if isUserLoggedIn}}
+      {{cards}}
     {{else}}
-      {{this.adduser}}
-      {{this.cards}}
+      {{adduser}}
+      {{cards}}
     {{/if}}
   {{/if}}
   {{#if (eq this.args.blockType "block2")}}
-    {{this.custom-topic-list}}
-    {{this.category-list}}
-    {{this.news}}
+    {{custom-topic-list}}
+    {{category-list}}
+    {{news}}
   {{/if}}
 {{/if}}
