@@ -4,7 +4,7 @@ import { userLoggedInStatus } from "../utility";
 export default {
     name: "activeUserLoggedInStatus",
     initialize() {
-        withPluginApi("0.8.7", (api) => {
+        withPluginApi("0.8.18", (api) => {
             api.onPageChange(() => {
                 userLoggedInStatus(api);
                 console.log("testing Page changed");
