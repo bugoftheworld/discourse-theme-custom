@@ -10,9 +10,7 @@ export default class MaintenanceNotificationBar extends Component {
         if (currentTime > endTime) {
             maintenanceNotificationBar.style.display = 'none';
         } else {
-            console.log('Maintenance Notification Bar is visible',durationTime);
             setTimeout(() => {
-                console.log('Maintenance Notification Bar is hidden');
                 maintenanceNotificationBar.style.transition = 'opacity .3s';
                 maintenanceNotificationBar.style.opacity = '0';
                 maintenanceNotificationBar.style.display = 'none';
