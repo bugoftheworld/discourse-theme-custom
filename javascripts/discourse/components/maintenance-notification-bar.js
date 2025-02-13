@@ -13,8 +13,10 @@ export default class MaintenanceNotificationBar extends Component {
             setTimeout(() => {
                 maintenanceNotificationBar.style.transition = 'opacity .3s';
                 maintenanceNotificationBar.style.opacity = '0';
-                maintenanceNotificationBar.style.display = 'none';
-            }, durationTime );
+                setTimeout(() => {
+                    maintenanceNotificationBar.style.display = 'none';
+                }, 300);
+            }, durationTime);
         }
     }
 }
