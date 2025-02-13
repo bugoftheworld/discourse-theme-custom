@@ -4,8 +4,8 @@ export default class MaintenanceNotificationBar extends Component {
     didInsertElement() {
         this._super(...arguments);
         const maintenanceNotificationBar = document.getElementById('maintenanceNotificationBar');
-        const endTime = parseInt(maintenanceNotificationBar.getAttribute('data-end-time'), 10);
-        const durationTime = parseInt(maintenanceNotificationBar.getAttribute('data-duration-time'), 10);
+        const endTime = maintenanceNotificationBar.getAttribute('data-end-time');
+        const durationTime = maintenanceNotificationBar.getAttribute('data-duration-time');
         const currentTime = new Date().getTime();
         if (currentTime > endTime) {
             console.log('Maintenance Notification Bar is inactive');
