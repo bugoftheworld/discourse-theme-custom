@@ -8,15 +8,15 @@ export default class MaintenanceNotificationBar extends Component {
         const durationTime = parseInt(maintenanceNotificationBar.getAttribute('data-duration-time'), 10);
         const currentTime = new Date().getTime();
         if (currentTime > endTime) {
+            console.log('Maintenance Notification Bar is inactive');
             maintenanceNotificationBar.style.display = 'none';
         } else {
+            console.log('Maintenance Notification Bar is active');
+            const fadeOutTime = Math.min(durationTime , 300);
             setTimeout(() => {
                 maintenanceNotificationBar.style.transition = 'opacity 1s';
                 maintenanceNotificationBar.style.opacity = '0';
-                setTimeout(() => {
-                    maintenanceNotificationBar.style.display = 'none';
-                }, 1000);
-            }, durationTime);
+            }, durationTime - fadeOutTime);
         }
     }
 }
