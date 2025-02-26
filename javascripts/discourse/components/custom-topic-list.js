@@ -43,12 +43,7 @@ export default class CustomTopicList extends Component {
             });
 
             if (topicList && topicList.topics) {
-                filteredTopics = topicList.topics.map(topic => {
-                    return {
-                        ...topic,
-                        excerpt: topic.excerpt || "..."
-                    };
-                });
+                filteredTopics = topicList.topics;
 
                 if (excludeCategories.length > 0) {
                     filteredTopics = filteredTopics.filter(topic => !excludeCategories.includes(topic.category_id));
