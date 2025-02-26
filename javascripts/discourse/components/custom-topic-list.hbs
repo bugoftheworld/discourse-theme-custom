@@ -1,4 +1,4 @@
-{{#if filteredTopics}}
+{{#if this.filteredTopics}}
   <div class="featured-lists__wrapper above-main-container full-width">
     <div class="featured-lists__list-container contents">
       <div class="featured-lists__list-header">
@@ -12,7 +12,7 @@
         </DButton>
       </div>
       <TopicList
-        @topics={{filteredTopics}}
+        @topics={{this.filteredTopics}}
         @showPosters="true"
         class="featured-lists__list-body"
       />

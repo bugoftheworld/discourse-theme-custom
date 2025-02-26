@@ -1,7 +1,6 @@
 import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
 import { defaultHomepage } from "discourse/lib/utilities";
-import { withPluginApi } from "discourse/lib/plugin-api";
 
 export default class CustomHomepageContent extends Component {
     @service router;
@@ -13,50 +12,6 @@ export default class CustomHomepageContent extends Component {
 
     get isUserLoggedIn() {
         return this.api?.getCurrentUser() !== null;
-    }
-
-    constructor() {
-        super(...arguments);
-
-        withPluginApi("0.8.18", (api) => {
-            this.api = api;
-
-            window.checkUserLoggedIn = false;
-
-            const userLoggedInStatus = () => {
-                fetch('https://account.qnap.com/oauth/login_status', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        app_id: '668ce78379a25e1282cf47e2'
-                    }),
-                    credentials: 'include'
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.status === "connected") {
-                            // User is logged in
-                        } else {
-                            const CURRENTUSER = api.getCurrentUser();
-                            if (CURRENTUSER){
-                                CURRENTUSER.destroySession();
-                            }
-                        }
-                    })
-                    .catch((error) => {
-                        console.error('Error:', error);
-                    });
-            };
-
-            api.onPageChange(() => {
-                if(!window.checkUserLoggedIn){
-                    userLoggedInStatus();
-                    window.checkUserLoggedIn = true;
-                }
-            });
-        });
     }
 
     get displayBlock() {
