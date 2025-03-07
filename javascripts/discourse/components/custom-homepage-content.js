@@ -4,7 +4,7 @@ import { defaultHomepage } from "discourse/lib/utilities";
 
 export default class CustomHomepageContent extends Component {
     @service router;
-    @service site;
+    @service currentUser;
 
     get isHomepage() {
         const { currentRouteName } = this.router;
@@ -12,8 +12,7 @@ export default class CustomHomepageContent extends Component {
     }
 
     get isUserLoggedIn() {
-        console.log('testing isUserLoggedIn--', this.site.currentUser);
-        return this.site?.currentUser !== null;
+        return Boolean(this.currentUser?.username);
     }
 
     get displayBlock() {
