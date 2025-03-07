@@ -23,9 +23,10 @@ export default {
                     return false;
                 }
 
-                const homeRoute = `discovery.${defaultHomepage()}`;
-                console.log("Current Route:", currentRouteName, "Expected Home Route:", homeRoute);
-                return currentRouteName === homeRoute;
+                const homeRoute = `discovery.${defaultHomepage()}`.trim();
+                const currentRoute = currentRouteName.trim();
+                console.log("Current Route:", currentRoute, "Expected Home Route:", homeRoute);
+                return currentRoute === homeRoute;
             };
 
             console.log("Testing activeUserLoggedInStatus--", isHomepage());
