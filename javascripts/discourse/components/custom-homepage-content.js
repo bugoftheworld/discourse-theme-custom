@@ -10,10 +10,6 @@ export default class CustomHomepageContent extends Component {
         return currentRouteName === `discovery.${defaultHomepage()}`;
     }
 
-    get isUserLoggedIn() {
-        return this.api?.getCurrentUser() !== null;
-    }
-
     get displayBlock() {
         const { blockType } = this.args;
         switch (blockType) {

@@ -1,4 +1,4 @@
-const userLoggedInStatus = (api) => {
+const userLoggedInStatus = (api, defaultHomepage) => {
     fetch('https://account.qnap.com/oauth/login_status', {
         method: 'POST',
         headers: {
@@ -12,11 +12,18 @@ const userLoggedInStatus = (api) => {
         .then(response => response.json())
         .then(data => {
             const CURRENTUSER = api.getCurrentUser();
+            console.log('User status:', defaultHomepage.isHomepage, data.status);
             if (data.status === "connected") {
                 // User is logged in
+                if (defaultHomepage.isHomepage && document.getElementById('adduser')) {
+                    document.querySelector('#adduser').style.display = 'none';
+                }
             } else {
                 if (CURRENTUSER && window.location.origin === "https://community.qnap.com") {
                     CURRENTUSER.destroySession();
+                }
+                if (defaultHomepage.isHomepage && document.getElementById('adduser')) {
+                    document.querySelector('#adduser').style.display = 'block';
                 }
             }
         })
@@ -25,4 +32,4 @@ const userLoggedInStatus = (api) => {
         });
 };
 
-export {userLoggedInStatus};
+export { userLoggedInStatus };
