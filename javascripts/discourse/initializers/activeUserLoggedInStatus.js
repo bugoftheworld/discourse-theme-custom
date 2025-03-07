@@ -6,6 +6,8 @@ export default {
     name: "activeUserLoggedInStatus",
     initialize() {
         withPluginApi("0.8.18", (api) => {
+            //get isHomepage from defaultHomepage
+            console.log("testing activeUserLoggedInStatus", defaultHomepage);
             api.onPageChange(() => {
                 userLoggedInStatus(api, defaultHomepage);
                 // console.log("testing Page changed");
