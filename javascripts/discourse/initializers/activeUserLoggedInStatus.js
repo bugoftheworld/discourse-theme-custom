@@ -23,9 +23,11 @@ export default {
                     return false;
                 }
 
-                const homeRoute = defaultHomepage();
-                const currentRoute = currentRouteName.split(".")[1];
+                const homeRoute = defaultHomepage().trim();
+                const currentRoute = currentRouteName.split(".")[1].trim();
                 console.log("Current Route:", currentRoute, "Expected Home Route:", homeRoute);
+                console.log(currentRoute === homeRoute);
+                console.log(currentRoute == homeRoute);
                 return currentRoute === homeRoute;
             };
 
