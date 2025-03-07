@@ -7,18 +7,20 @@ export default {
     initialize() {
         withPluginApi("0.8.18", (api) => {
             const isHomepage = () => {
+                const homeRoute = `discovery.${defaultHomepage()}`; // 構造完整路由名稱
                 const { currentRouteName } = api.router;
-                return currentRouteName === `discovery.${defaultHomepage()}`;
+                console.log("Current Route:", currentRouteName, "Expected Home Route:", homeRoute);
+                return currentRouteName === homeRoute;
             };
 
-            console.log("testing activeUserLoggedInStatus--", isHomepage());
+            console.log("Testing activeUserLoggedInStatus--", isHomepage());
+
             api.onPageChange(() => {
-                userLoggedInStatus(api, isHomepage());
-                // console.log("testing Page changed");
+                userLoggedInStatus(api);
             });
+
             api.onAppEvent("post-stream:posted", () => {
-                userLoggedInStatus(api, isHomepage());
-                // console.log("testing posted");
+                userLoggedInStatus(api);
             });
         });
     },
