@@ -6,39 +6,12 @@ export default {
     name: "activeUserLoggedInStatus",
     initialize() {
         withPluginApi("0.8.18", (api) => {
-            const getRouter = () => {
-                return api.container.lookup("service:router");
-            };
-
-            const isHomepage = () => {
-                const router = getRouter();
-                if (!router) {
-                    console.warn("Discourse router is not available.");
-                    return false;
-                }
-
-                const { currentRouteName } = router;
-                if (!currentRouteName) {
-                    console.warn("Router is available but currentRouteName is undefined.");
-                    return false;
-                }
-
-                const homeRoute = defaultHomepage().trim();
-                const currentRoute = currentRouteName.split(".")[1].trim();
-                console.log("Current Route:", currentRoute, "Expected Home Route:", homeRoute);
-                console.log(currentRoute === homeRoute);
-                console.log(currentRoute == homeRoute);
-                return currentRoute === homeRoute;
-            };
-
-            console.log("Testing activeUserLoggedInStatus--", isHomepage());
-
             api.onPageChange(() => {
-                userLoggedInStatus(api, isHomepage());
+                userLoggedInStatus(api, defaultHomepage);
             });
 
             api.onAppEvent("post-stream:posted", () => {
-                userLoggedInStatus(api, isHomepage());
+                userLoggedInStatus(api, defaultHomepage);
             });
         });
     },
