@@ -36,6 +36,7 @@ const userLoggedInStatus = (api, defaultHomepage) => {
 
             if (data.status === "connected") {
                 // User is logged in
+                console.log('User is logged in', isHomepage(), document.getElementById('adduser'));
                 if (isHomepage() && document.getElementById('adduser')) {
                     document.getElementById('adduser').style.display = 'none';
                 }
@@ -43,6 +44,7 @@ const userLoggedInStatus = (api, defaultHomepage) => {
                 if (CURRENTUSER && window.location.origin === "https://community.qnap.com") {
                     CURRENTUSER.destroySession();
                 }
+                console.log('User is not logged in', isHomepage(), document.getElementById('adduser'));
                 if (isHomepage() && document.getElementById('adduser')) {
                     document.getElementById('adduser').style.display = 'block';
                 }
