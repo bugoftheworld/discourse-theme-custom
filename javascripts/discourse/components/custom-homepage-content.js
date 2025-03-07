@@ -12,6 +12,7 @@ export default class CustomHomepageContent extends Component {
     }
 
     get isUserLoggedIn() {
+        console.log('testing isUserLoggedIn--', this.site.currentUser);
         return this.site?.currentUser !== null;
     }
 
