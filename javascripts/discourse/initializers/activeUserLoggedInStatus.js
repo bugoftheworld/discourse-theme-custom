@@ -23,8 +23,8 @@ export default {
                     return false;
                 }
 
-                const homeRoute = `discovery.${defaultHomepage()}`.trim();
-                const currentRoute = currentRouteName.trim();
+                const homeRoute = `discovery.${defaultHomepage()}`.replace(/[^\w\s]/gi, '').trim();
+                const currentRoute = currentRouteName.replace(/[^\w\s]/gi, '').trim();
                 console.log("Current Route:", currentRoute, "Expected Home Route:", homeRoute);
                 return currentRoute === homeRoute;
             };
