@@ -14,17 +14,15 @@ const userLoggedInStatus = (api, isHomepage) => {
             const CURRENTUSER = api.getCurrentUser();
             if (data.status === "connected") {
                 // User is logged in
-                console.log('User is logged in',isHomepage);
                 if (isHomepage && document.getElementById('adduser')) {
-                    document.querySelector('#adduser').style.display = 'none';
+                    document.getElementById('adduser').style.display = 'none';
                 }
             } else {
                 if (CURRENTUSER && window.location.origin === "https://community.qnap.com") {
                     CURRENTUSER.destroySession();
                 }
-                console.log('User is not logged in',isHomepage);
                 if (isHomepage && document.getElementById('adduser')) {
-                    document.querySelector('#adduser').style.display = 'block';
+                    document.getElementById('adduser').style.display = 'block';
                 }
             }
         })

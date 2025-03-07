@@ -24,7 +24,7 @@ export default {
                 }
 
                 const homeRoute = `discovery.${defaultHomepage()}`;
-                console.log("Current Route:", currentRouteName, "Expected Home Route:", homeRoute);
+                // console.log("Current Route:", currentRouteName, "Expected Home Route:", homeRoute);
                 return currentRouteName === homeRoute;
             };
 
