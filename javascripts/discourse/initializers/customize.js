@@ -264,7 +264,6 @@ export default {
                         const domain = window.location.origin;
                         const logoSetting = data.site_settings.find(setting => setting.setting === 'logo');
                         const logoUrl =  `${domain}${logoSetting.value}`;
-                        console.log(logoUrl);
                         document.getElementById('site-logo').src = logoUrl;
                     });
             });
