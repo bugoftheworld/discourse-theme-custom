@@ -256,16 +256,6 @@ export default {
                 if (domain !== "https://community.qnap.com") {
                     siteStatus.innerText = "Testing";
                 }
-
-                // Fetch and update the logo URL
-                // fetch('/admin/site_settings.json')
-                //     .then(response => response.json())
-                //     .then(data => {
-                //         const domain = window.location.origin;
-                //         const logoSetting = data.site_settings.find(setting => setting.setting === 'logo');
-                //         const logoUrl =  `${domain}${logoSetting.value}`;
-                //         document.getElementById('site-logo').src = logoUrl;
-                //     });
             });
         });
     },
