@@ -256,6 +256,16 @@ export default {
                 if (domain !== "https://community.qnap.com") {
                     siteStatus.innerText = "Testing";
                 }
+
+                // Fetch and update the logo URL
+                const logoUrl = Discourse.SiteSettings.logo;
+                const logoElement = document.getElementById('site-logo');
+
+                if (logoUrl) {
+                    logoElement.src = logoUrl.startsWith('//')
+                        ? `https:${logoUrl}`
+                        : logoUrl;
+                }
             });
         });
     },
