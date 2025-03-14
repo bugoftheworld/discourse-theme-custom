@@ -124,139 +124,147 @@ export default {
             // };
 
             api.onPageChange(() => {
-            const currentRoute = api.container.lookup("router:main").currentRouteName;
-            const isHomepage = currentRoute === `discovery.${defaultHomepage()}`;
-            const applicationController = api.container.lookup("controller:application");
-            const main = document.getElementById("main");
-            const domain = window.location.origin;
-            main.classList.add("discourse-theme--q");
+                const currentRoute = api.container.lookup("router:main").currentRouteName;
+                const isHomepage = currentRoute === `discovery.${defaultHomepage()}`;
+                const applicationController = api.container.lookup("controller:application");
+                const main = document.getElementById("main");
+                const domain = window.location.origin;
+                main.classList.add("discourse-theme--q");
 
-            if (isHomepage) {
-                applicationController.set("showSidebar", false);
-                main.classList.add("isHomepage");
-                const loadLatestTopics = async () => {
-                    const response = await fetch(`${domain}/latest.json`);
-                    const data = await response.json();
-                    const topics = data.topic_list.topics;
-                    const locale = I18n.currentLocale();
-                    if (topics) {
-                        const featureListWrapper = document.getElementsByClassName("featured-lists__wrapper");
-                        const featureListContainer = document.getElementsByClassName("featured-lists__list-container");
-                        for (let i = 0; i < featureListWrapper.length; i++) {
-                            featureListWrapper[i].classList.add("full-width");
+                if (isHomepage) {
+                    applicationController.set("showSidebar", false);
+                    main.classList.add("isHomepage");
+                    const loadLatestTopics = async () => {
+                        const response = await fetch(`${domain}/latest.json`);
+                        const data = await response.json();
+                        const topics = data.topic_list.topics;
+                        const locale = I18n.currentLocale();
+                        if (topics) {
+                            const featureListWrapper = document.getElementsByClassName("featured-lists__wrapper");
+                            const featureListContainer = document.getElementsByClassName("featured-lists__list-container");
+                            for (let i = 0; i < featureListWrapper.length; i++) {
+                                featureListWrapper[i].classList.add("full-width");
+                            }
+                            for (let i = 0; i < featureListContainer.length; i++) {
+                                featureListContainer[i].classList.add("contents");
+                            }
                         }
-                        for (let i = 0; i < featureListContainer.length; i++) {
-                            featureListContainer[i].classList.add("contents");
-                        }
+                        updateLangs([
+                            {
+                                wrap: ".featured-lists__list-header",
+                                selector: "h2",
+                                order: 'all',
+                                content: I18n.t(themePrefix("features_list.latest.status"))
+                            },
+                            {
+                                wrap: ".featured-lists__list-header",
+                                selector: "a",
+                                order: 'all',
+                                content: I18n.t(themePrefix("features_list.latest.all"))
+                            },
+                            {
+                                wrap: ".custom-search-banner-wrap",
+                                selector: "h1",
+                                order: 0,
+                                content: I18n.t(themePrefix("search_banner.headline"))
+                            },
+                            {
+                                wrap: ".custom-search-banner-wrap",
+                                selector: "p",
+                                order: 0,
+                                content: I18n.t(themePrefix("search_banner.subhead"))
+                            },
+                            {
+                                wrap: ".footer-links",
+                                selector: "a",
+                                order: 0,
+                                content: I18n.t(themePrefix("footer.privacy_policy"))
+                            },
+                            {
+                                wrap: ".footer-links",
+                                selector: "a",
+                                order: 1,
+                                content: I18n.t(themePrefix("footer.terms_of_service"))
+                            },
+                            {
+                                wrap: ".footer-links",
+                                selector: "a",
+                                order: 2,
+                                content: I18n.t(themePrefix("footer.about"))
+                            },
+                            {
+                                wrap: "[data-easyfooter-section=\"third-party-forums\"]",
+                                selector: "span",
+                                order: 0,
+                                content: I18n.t(themePrefix("footer.third_party_forums"))
+                            },
+                        ]);
+
+                        const searchBanner = document.querySelector(".custom-search-banner-wrap");
+                        searchBanner.classList.add("active");
+
+                        // const featureListLatest = document.querySelectorAll(".feature-list-latest");
+                        // featureListLatest.forEach((featureList) => {
+                        //     featureList.style.display = "none";
+                        // });
+
+                        // showFeatureListLatest(domain, locale);
                     }
-                    updateLangs([
-                        {
-                            wrap: ".featured-lists__list-header",
-                            selector: "h2",
-                            order: 'all',
-                            content: I18n.t(themePrefix("features_list.latest.status"))
-                        },
-                        {
-                            wrap: ".featured-lists__list-header",
-                            selector: "a",
-                            order: 'all',
-                            content: I18n.t(themePrefix("features_list.latest.all"))
-                        },
-                        {
-                            wrap: ".custom-search-banner-wrap",
-                            selector: "h1",
-                            order: 0,
-                            content: I18n.t(themePrefix("search_banner.headline"))
-                        },
-                        {
-                            wrap: ".custom-search-banner-wrap",
-                            selector: "p",
-                            order: 0,
-                            content: I18n.t(themePrefix("search_banner.subhead"))
-                        },
-                        {
-                            wrap: ".footer-links",
-                            selector: "a",
-                            order: 0,
-                            content: I18n.t(themePrefix("footer.privacy_policy"))
-                        },
-                        {
-                            wrap: ".footer-links",
-                            selector: "a",
-                            order: 1,
-                            content: I18n.t(themePrefix("footer.terms_of_service"))
-                        },
-                        {
-                            wrap: ".footer-links",
-                            selector: "a",
-                            order: 2,
-                            content: I18n.t(themePrefix("footer.about"))
-                        },
-                        {
-                            wrap: "[data-easyfooter-section=\"third-party-forums\"]",
-                            selector: "span",
-                            order: 0,
-                            content: I18n.t(themePrefix("footer.third_party_forums"))
-                        },
-                    ]);
 
-                    const searchBanner = document.querySelector(".custom-search-banner-wrap");
-                    searchBanner.classList.add("active");
-
-                    // const featureListLatest = document.querySelectorAll(".feature-list-latest");
-                    // featureListLatest.forEach((featureList) => {
-                    //     featureList.style.display = "none";
-                    // });
-
-                    // showFeatureListLatest(domain, locale);
+                    loadLatestTopics();
+                } else {
+                    applicationController.set("showSidebar", true);
+                    main.classList.remove("isHomepage");
+                    if (document.querySelector(".footer-links")) {
+                        updateLangs([
+                            {
+                                wrap: ".footer-links",
+                                selector: "a",
+                                order: 0,
+                                content: I18n.t(themePrefix("footer.privacy_policy"))
+                            },
+                            {
+                                wrap: ".footer-links",
+                                selector: "a",
+                                order: 1,
+                                content: I18n.t(themePrefix("footer.terms_of_service"))
+                            },
+                            {
+                                wrap: ".footer-links",
+                                selector: "a",
+                                order: 2,
+                                content: I18n.t(themePrefix("footer.about"))
+                            },
+                            {
+                                wrap: "[data-easyfooter-section=\"third-party-forums\"]",
+                                selector: "span",
+                                order: 0,
+                                content: I18n.t(themePrefix("footer.third_party_forums"))
+                            },
+                        ]);
+                    }
                 }
 
-                loadLatestTopics();
-            } else {
-                applicationController.set("showSidebar", true);
-                main.classList.remove("isHomepage");
-                if (document.querySelector(".footer-links")) {
-                    updateLangs([
-                        {
-                            wrap: ".footer-links",
-                            selector: "a",
-                            order: 0,
-                            content: I18n.t(themePrefix("footer.privacy_policy"))
-                        },
-                        {
-                            wrap: ".footer-links",
-                            selector: "a",
-                            order: 1,
-                            content: I18n.t(themePrefix("footer.terms_of_service"))
-                        },
-                        {
-                            wrap: ".footer-links",
-                            selector: "a",
-                            order: 2,
-                            content: I18n.t(themePrefix("footer.about"))
-                        },
-                        {
-                            wrap: "[data-easyfooter-section=\"third-party-forums\"]",
-                            selector: "span",
-                            order: 0,
-                            content: I18n.t(themePrefix("footer.third_party_forums"))
-                        },
-                    ]);
+                updateMultilingualCategoryInSidebar();
+                // Only initialize the sidebar menu button observer if it hasn't been done already
+                if (!sidebarMenuButtonObserverInitialized) {
+                    observeSidebarMenuButton();
+                    sidebarMenuButtonObserverInitialized = true;
                 }
-            }
 
-            updateMultilingualCategoryInSidebar();
-            // Only initialize the sidebar menu button observer if it hasn't been done already
-            if (!sidebarMenuButtonObserverInitialized) {
-                observeSidebarMenuButton();
-                sidebarMenuButtonObserverInitialized = true;
-            }
+                const siteStatus = document.getElementById("siteStatus");
+                if (domain !== "https://community.qnap.com") {
+                    siteStatus.innerText = "Testing";
+                }
 
-            const siteStatus = document.getElementById("siteStatus");
-            if (domain !== "https://community.qnap.com") {
-                siteStatus.innerText = "Testing";
-            }
+                // Fetch and update the logo URL
+                fetch('/admin/site_settings.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const logoUrl = data['site-setting'].logo.value;
+                        document.getElementById('site-logo').src = logoUrl;
+                    });
+            });
         });
-    });
-},
+    },
 };
