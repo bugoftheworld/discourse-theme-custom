@@ -266,6 +266,7 @@ export default {
                             value = 'https:' + value;
                         }
                         const logoUrl = value;
+                        console.log(logoUrl);
                         document.getElementById('site-logo').src = logoUrl;
                     });
             });
