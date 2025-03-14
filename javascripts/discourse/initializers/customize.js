@@ -261,10 +261,9 @@ export default {
                 fetch('/admin/site_settings.json')
                     .then(response => response.json())
                     .then(data => {
+                        const domain = window.location.origin;
                         const logoSetting = data.site_settings.find(setting => setting.setting === 'logo');
-                        const logoUrl = logoSetting.value.startsWith('//')
-                            ? `https:${logoSetting.value}`
-                            : `https://${logoSetting.value}`;
+                        const logoUrl =  `${domain}${logoSetting.value}`;
                         console.log(logoUrl);
                         document.getElementById('site-logo').src = logoUrl;
                     });
