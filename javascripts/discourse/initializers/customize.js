@@ -261,7 +261,11 @@ export default {
                 fetch('/admin/site_settings.json')
                     .then(response => response.json())
                     .then(data => {
-                        const logoUrl = data['site-setting'].logo.value;
+                        const value = data['site-setting'].find(setting => setting.setting === 'logo').value;
+                        if (value.startsWith('//')) {
+                            value = 'https:' + value;
+                        }
+                        const logoUrl = value;
                         document.getElementById('site-logo').src = logoUrl;
                     });
             });
