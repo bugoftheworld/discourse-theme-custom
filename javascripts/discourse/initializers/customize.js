@@ -264,7 +264,7 @@ export default {
                         const logoSetting = data.site_settings.find(setting => setting.setting === 'logo');
                         const logoUrl = logoSetting.value.startsWith('//')
                             ? `https:${logoSetting.value}`
-                            : logoSetting.value;
+                            : `https://${logoSetting.value}`;
                         console.log(logoUrl);
                         document.getElementById('site-logo').src = logoUrl;
                     });
