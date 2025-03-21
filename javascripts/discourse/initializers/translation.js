@@ -34,8 +34,8 @@ export default {
             }
 
             // 只有在 user_tips 存在時才執行轉換
-            if (I18n.translations[locale].js.user_tips) {
-                I18n.translations[locale].js.user_tips = replaceSingleQuotes(I18n.translations[locale].js.user_tips);
+            if (I18n.translations[locale].js) {
+                I18n.translations[locale].js = replaceSingleQuotes(I18n.translations[locale].js);
             }
         });
     },
