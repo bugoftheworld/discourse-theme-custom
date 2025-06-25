@@ -1,6 +1,6 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { defaultHomepage } from "discourse/lib/utilities";
-import { addServiceTicketButtons } from "discourse/utility/service-ticket-handler";
+import { addServiceTicketButtons } from "../utility";
 
 export default {
     name: "custom-settings",
