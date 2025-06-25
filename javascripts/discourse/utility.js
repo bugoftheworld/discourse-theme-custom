@@ -46,7 +46,7 @@ const addServiceTicketButtonToTopic = (api) => {
     // Only show button if current user is the topic author and topic has 'service-ticket' tag
     if (isAuthor && topic.tags && topic.tags.includes('service-ticket')) {
         setTimeout(() => {
-            const footerButtons = document.querySelector('#topic-footer-main-buttons');
+            const footerButtons = document.querySelector('.topic-footer-main-buttons');
 
             if (footerButtons && !footerButtons.querySelector('.service-ticket-button')) {
                 const serviceButton = document.createElement('button');
