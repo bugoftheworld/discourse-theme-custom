@@ -1,6 +1,6 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { defaultHomepage } from "discourse/lib/utilities";
-import { addServiceTicketButtons } from "../utility";
+import { addServiceTicketButtonToTopic } from "../utility";
 
 export default {
     name: "custom-settings",
@@ -205,9 +205,6 @@ export default {
                         const searchBanner = document.querySelector(".custom-search-banner-wrap");
                         searchBanner.classList.add("active");
 
-                        // Add service ticket buttons for topics with 'service-ticket' tag
-                        addServiceTicketButtons(topics);
-
                         // const featureListLatest = document.querySelectorAll(".feature-list-latest");
                         // featureListLatest.forEach((featureList) => {
                         //     featureList.style.display = "none";
@@ -271,6 +268,9 @@ export default {
                         ? `https:${logoUrl}`
                         : logoUrl;
                 }
+
+                // Add service ticket button to topic page if conditions are met
+                addServiceTicketButtonToTopic(api);
             });
         });
     },

@@ -294,19 +294,7 @@ ul.news-content {
   }
 }
 
-// Service Ticket Button Styles
-.service-ticket-button-container {
-  margin-top: 8px;
-}
-
-.service-ticket-button {
-  font-size: 12px;
-  padding: 4px 8px;
-  margin-left: 8px;
-  display: inline-block;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
+// Service Ticket Button Styles for topic footer
+#topic-footer-buttons .service-ticket-button {
+  margin-right: 8px;
 }
