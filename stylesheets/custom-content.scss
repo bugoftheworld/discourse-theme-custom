@@ -295,6 +295,27 @@ ul.news-content {
 }
 
 // Service Ticket Button Styles for topic footer
-#topic-footer-buttons .service-ticket-button {
-  margin-right: 8px;
+#topic-footer-main-buttons .service-ticket-button {
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
+
+  .service-ticket-text {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Ensure button is properly sized on mobile when text is hidden
+  @media screen and (max-width: 768px) {
+    min-width: auto;
+    padding: 8px 12px;
+  }
 }

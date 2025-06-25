@@ -46,13 +46,30 @@ const addServiceTicketButtonToTopic = (api) => {
     // Only show button if current user is the topic author and topic has 'service-ticket' tag
     if (isAuthor && topic.tags && topic.tags.includes('service-ticket')) {
         setTimeout(() => {
-            const footerButtons = document.querySelector('#topic-footer-buttons');
+            const footerButtons = document.querySelector('#topic-footer-main-buttons');
 
             if (footerButtons && !footerButtons.querySelector('.service-ticket-button')) {
                 const serviceButton = document.createElement('button');
                 serviceButton.className = 'service-ticket-button btn btn-primary';
-                serviceButton.textContent = 'Create Service Ticket';
                 serviceButton.title = 'Create a service ticket for this topic';
+
+                // Create icon element using Discourse's icon system
+                const icon = document.createElement('svg');
+                icon.className = 'fa d-icon d-icon-plus svg-icon svg-string';
+                icon.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+
+                const use = document.createElement('use');
+                use.setAttribute('href', '#plus');
+                icon.appendChild(use);
+
+                // Create text span for responsive design
+                const textSpan = document.createElement('span');
+                textSpan.className = 'service-ticket-text';
+                textSpan.textContent = 'Create Service Ticket';
+
+                // Append icon and text to button
+                serviceButton.appendChild(icon);
+                serviceButton.appendChild(textSpan);
 
                 // Add click handler
                 serviceButton.addEventListener('click', (e) => {
