@@ -1,5 +1,6 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { defaultHomepage } from "discourse/lib/utilities";
+import { addServiceTicketButtons } from "discourse/utility/service-ticket-handler";
 
 export default {
     name: "custom-settings",
@@ -139,6 +140,7 @@ export default {
                         const data = await response.json();
                         const topics = data.topic_list.topics;
                         const locale = I18n.currentLocale();
+
                         if (topics) {
                             const featureListWrapper = document.getElementsByClassName("featured-lists__wrapper");
                             const featureListContainer = document.getElementsByClassName("featured-lists__list-container");
@@ -202,6 +204,9 @@ export default {
 
                         const searchBanner = document.querySelector(".custom-search-banner-wrap");
                         searchBanner.classList.add("active");
+
+                        // Add service ticket buttons for topics with 'service-ticket' tag
+                        addServiceTicketButtons(topics);
 
                         // const featureListLatest = document.querySelectorAll(".feature-list-latest");
                         // featureListLatest.forEach((featureList) => {
