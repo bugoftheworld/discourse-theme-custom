@@ -57,7 +57,7 @@ const addServiceTicketButtonToTopic = (api) => {
                     <svg class="fa d-icon d-icon-plus svg-icon svg-string" xmlns="http://www.w3.org/2000/svg">
                         <use href="#plus"></use>
                     </svg>
-                    <span class="service-ticket-text">Create Service Ticket</span>
+                    <span class="d-button-label">Create Service Ticket</span>
                 `;
 
                 // Add click handler
