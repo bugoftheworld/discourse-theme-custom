@@ -69,9 +69,8 @@ const addServiceTicketButtonToTopic = (api) => {
                 serviceButton.addEventListener('click', (e) => {
                     e.preventDefault();
                     const topicId = topic.id;
-                    
+                    const domain = window.location.origin;
                     let serviceTicketLink = `https://service.qnap.com/go/user/create-ticket/community?topic_id=${topicId}`;
-
                     if (domain !== "https://community.qnap.com") {
                         serviceTicketLink = `https://stage-service.qnap.com/go/user/create-ticket/community?topic_id=${topicId}`;
                     }
