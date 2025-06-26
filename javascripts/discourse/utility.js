@@ -48,23 +48,35 @@ const addServiceTicketButtonToTopic = (api) => {
         setTimeout(() => {
             const footerButtons = document.querySelector('.topic-footer-main-buttons');
 
-            if (footerButtons && !footerButtons.querySelector('.service-ticket-button')) {                const serviceButton = document.createElement('button');
+            if (footerButtons && !footerButtons.querySelector('.service-ticket-button')) {
+                const serviceButton = document.createElement('button');
                 serviceButton.className = 'service-ticket-button btn btn-primary';
                 serviceButton.title = 'Create a service ticket for this topic';
+
+                const buttonLabel = I18n.t(themePrefix("topic.create_ticket_label"), {
+                    defaultValue: 'Create Service Ticket'
+                });
 
                 // Create the button content with SVG icon and text
                 serviceButton.innerHTML = `
                     <svg class="fa d-icon d-icon-plus svg-icon svg-string" xmlns="http://www.w3.org/2000/svg">
                         <use href="#plus"></use>
                     </svg>
-                    <span class="d-button-label">Create Service Ticket</span>
+                    <span class="d-button-label">${buttonLabel}</span>
                 `;
 
                 // Add click handler
                 serviceButton.addEventListener('click', (e) => {
                     e.preventDefault();
-                    // Replace with your desired action
-                    window.open('https://example.com/service-ticket', '_blank');
+                    const topicId = topic.id;
+                    
+                    let serviceTicketLink = `https://service.qnap.com/go/user/create-ticket/community?topic_id=${topicId}`;
+
+                    if (domain !== "https://community.qnap.com") {
+                        serviceTicketLink = `https://stage-service.qnap.com/go/user/create-ticket/community?topic_id=${topicId}`;
+                    }
+
+                    window.open(serviceTicketLink, '_blank');
                     console.log('Service ticket button clicked for topic:', topic.title);
                 });
 
