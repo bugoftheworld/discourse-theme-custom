@@ -124,6 +124,14 @@ export default {
             // };
 
             api.onPageChange(() => {
+                setTimeout(() => {
+                    const usernameInput = document.querySelector("#new-account-username");
+                    if (usernameInput) {
+                        usernameInput.value = "";
+                        usernameInput.setAttribute("autocomplete", "off");
+                    }
+                }, 200);
+
                 const currentRoute = api.container.lookup("router:main").currentRouteName;
                 const isHomepage = currentRoute === `discovery.${defaultHomepage()}`;
                 const applicationController = api.container.lookup("controller:application");
