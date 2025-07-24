@@ -127,8 +127,10 @@ export default {
                 setTimeout(() => {
                     const usernameInput = document.querySelector("#new-account-username");
                     if (usernameInput) {
-                        usernameInput.value = "";
-                        usernameInput.setAttribute("autocomplete", "off");
+                        usernameInput.value = "";                                    // 清空
+                        usernameInput.setAttribute("autocomplete", "off");           // 防 Autofill
+                        /* 讓 Ember 的 onInput Action 被觸發，進而跑 validation */
+                        usernameInput.dispatchEvent(new Event("input", { bubbles: true }));
                     }
                 }, 200);
 
