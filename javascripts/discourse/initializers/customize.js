@@ -67,11 +67,11 @@ export default {
                 });
 
                 // Start observing attribute changes on the button
-                observer.observe(button, { attributes: true });
+                observer.observe(button, {attributes: true});
             };
 
             const updateLangs = (langs = []) => {
-                langs.forEach(({ wrap, selector, order, content }) => {
+                langs.forEach(({wrap, selector, order, content}) => {
                     if (order === 'all') {
                         const elements = document.querySelectorAll(wrap);
                         for (let i = 0; i < elements.length; i++) {
@@ -125,13 +125,30 @@ export default {
             // };
 
             api.onPageChange(() => {
+                setTimeout(() => {
+                    const usernameInput = document.querySelector("#new-account-username");
+                    if (usernameInput) {
+                        usernameInput.value = "";                                    // 清空
+                        usernameInput.setAttribute("autocomplete", "off");           // 防 Autofill
+                        /* 讓 Ember 的 onInput Action 被觸發，進而跑 validation */
+                        usernameInput.dispatchEvent(new Event("input", { bubbles: true }));
+                    }
+                }, 200);
+
                 const currentRoute = api.container.lookup("router:main").currentRouteName;
                 const isHomepage = currentRoute === `discovery.${defaultHomepage()}`;
                 const applicationController = api.container.lookup("controller:application");
                 const main = document.getElementById("main");
                 const domain = window.location.origin;
-                main.classList.add("discourse-theme--q");
+                // for register honeypot
+                const hp = document.querySelector('#new-account-confirmation');
+                if (hp) {
+                    hp.type = 'text';
+                    hp.autocomplete = 'new-password';
+                    hp.readOnly = true;
+                }
 
+                main.classList.add("discourse-theme--q");
                 if (isHomepage) {
                     applicationController.set("showSidebar", false);
                     main.classList.add("isHomepage");
