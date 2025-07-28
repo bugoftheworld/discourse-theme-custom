@@ -87,3 +87,5 @@ ja:
     privacy_policy: "プライバシーポリシー"
     terms_of_service: "利用規約"
     about: "概要"
+  topic:
+    create_ticket_label: "技術サポートチケットを作成する"

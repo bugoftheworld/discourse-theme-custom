@@ -87,3 +87,5 @@ zh_TW:
     privacy_policy: "隱私政策"
     terms_of_service: "服務條款"
     about: "關於"
+  topic:
+    create_ticket_label: "建立技術服務支援單"

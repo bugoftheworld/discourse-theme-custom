@@ -1,5 +1,6 @@
-import {withPluginApi} from "discourse/lib/plugin-api";
-import {defaultHomepage} from "discourse/lib/utilities";
+import { withPluginApi } from "discourse/lib/plugin-api";
+import { defaultHomepage } from "discourse/lib/utilities";
+import { addServiceTicketButtonToTopic } from "../utility";
 
 export default {
     name: "custom-settings",
@@ -156,6 +157,7 @@ export default {
                         const data = await response.json();
                         const topics = data.topic_list.topics;
                         const locale = I18n.currentLocale();
+
                         if (topics) {
                             const featureListWrapper = document.getElementsByClassName("featured-lists__wrapper");
                             const featureListContainer = document.getElementsByClassName("featured-lists__list-container");
@@ -283,6 +285,9 @@ export default {
                         ? `https:${logoUrl}`
                         : logoUrl;
                 }
+
+                // Add service ticket button to topic page if conditions are met
+                addServiceTicketButtonToTopic(api);
             });
         });
     },

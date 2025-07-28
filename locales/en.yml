@@ -59,3 +59,5 @@ en:
     privacy_policy: "Privacy Policy"
     terms_of_service: "Terms of Service"
     about: "About"
+  topic:
+    create_ticket_label: "Create Service Ticket"
