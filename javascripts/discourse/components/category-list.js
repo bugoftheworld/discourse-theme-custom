@@ -5,13 +5,24 @@ export default Component.extend({
     didInsertElement() {
         this._super(...arguments);
 
-        const apiUrl = '/categories.json';
+        const apiUrl = '/categories.json?include_subcategories=true';
 
         ajax(apiUrl, {
             method: 'GET'
         }).then((data) => {
             const categories = data.category_list.categories;
             const visibleCategories = categories.filter(category => !category.read_restricted);
+
+            let aiSubCategory = null;
+            categories.forEach(category => {
+                if (category.subcategory_list) {
+                    const aiSub = category.subcategory_list.find(sub => sub.name === "AI");
+                    if (aiSub && !aiSub.read_restricted) {
+                        aiSubCategory = aiSub;
+                    }
+                }
+            });
+
             visibleCategories.forEach(category => {
                 category.description = category.description;
                 category.name = category.name;
@@ -26,6 +37,20 @@ export default Component.extend({
                     }
                 }
             });
+
+            if (aiSubCategory) {
+                if(aiSubCategory.slug) {
+                    let translatedCategoryName = I18n.t(themePrefix("category." + aiSubCategory.slug + ".name"));
+                    let translatedCategoryDesc = I18n.t(themePrefix("category." + aiSubCategory.slug + ".description"));
+                    if (translatedCategoryDesc.indexOf('.theme_translations.') === -1) {
+                        aiSubCategory.description = translatedCategoryDesc;
+                    }
+                    if (translatedCategoryName.indexOf('.theme_translations.') === -1) {
+                        aiSubCategory.name = translatedCategoryName;
+                    }
+                }
+                visibleCategories.push(aiSubCategory);
+            }
 
             this.set('categories', visibleCategories);
         }).catch((error) => {
