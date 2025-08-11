@@ -19,6 +19,10 @@ export default Component.extend({
                     const aiSub = category.subcategory_list.find(sub => sub.name === "AI");
                     if (aiSub && !aiSub.read_restricted) {
                         aiSubCategory = aiSub;
+                        aiSubCategory.parent_category = {
+                            slug: category.slug,
+                            id: category.id
+                        };
                     }
                 }
             });
