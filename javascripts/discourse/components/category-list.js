@@ -30,6 +30,8 @@ export default Component.extend({
             visibleCategories.forEach(category => {
                 category.description = category.description;
                 category.name = category.name;
+                category.categoryUrl = `/c/${category.slug}/${category.id}`;
+
                 if(category.slug) {
                     let translatedCategoryName = I18n.t(themePrefix("category." + category.slug + ".name"));
                     let translatedCategoryDesc = I18n.t(themePrefix("category." + category.slug + ".description"));
@@ -53,6 +55,7 @@ export default Component.extend({
                         aiSubCategory.name = translatedCategoryName;
                     }
                 }
+                aiSubCategory.categoryUrl = `/c/${aiSubCategory.parent_category.slug}/${aiSubCategory.slug}/${aiSubCategory.id}`;
                 visibleCategories.push(aiSubCategory);
             }
 

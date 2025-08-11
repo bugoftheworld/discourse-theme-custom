@@ -7,7 +7,7 @@
           <div>
             <div>
               <a
-                href="{{#if category.parent_category}}/c/{{category.parent_category.slug}}/{{category.slug}}/{{category.id}}{{else}}/c/{{category.slug}}/{{category.id}}{{/if}}"
+                href="{{category.categoryUrl}}"
               >
                 <figure><img
                     src="{{category.uploaded_logo.url}}"
