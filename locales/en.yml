@@ -59,5 +59,9 @@ en:
     privacy_policy: "Privacy Policy"
     terms_of_service: "Terms of Service"
     about: "About"
+  category:
+    ai:
+      name: "AI"
+      description: "Explore artificial intelligence and machine learning discussions related to QNAP products and solutions."
   topic:
     create_ticket_label: "Create Service Ticket"

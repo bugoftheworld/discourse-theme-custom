@@ -6,9 +6,11 @@
         <li>
           <div>
             <div>
-              <a
-                href="/c/{{category.slug}}/{{category.id}}"
-              >
+              {{#if category.parent_category_id}}
+                <a href="/c/{{category.parentCategory.slug}}/{{category.slug}}/{{category.id}}">
+              {{else}}
+                <a href="/c/{{category.slug}}/{{category.id}}">
+              {{/if}}
                 <figure><img
                     src="{{category.uploaded_logo.url}}"
                     alt="{{category.name}}"

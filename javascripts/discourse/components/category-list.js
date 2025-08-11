@@ -12,6 +12,13 @@ export default Component.extend({
         }).then((data) => {
             const categories = data.category_list.categories;
             const visibleCategories = categories.filter(category => !category.read_restricted);
+
+            // Find the AI subcategory specifically
+            const aiSubcategory = categories.find(category =>
+                category.slug === 'ai' && category.parent_category_id
+            );
+
+            // Process main categories
             visibleCategories.forEach(category => {
                 category.description = category.description;
                 category.name = category.name;
@@ -26,6 +33,29 @@ export default Component.extend({
                     }
                 }
             });
+
+            // Add AI subcategory if it exists and is visible
+            if (aiSubcategory && !aiSubcategory.read_restricted) {
+                // Find parent category for proper URL construction
+                const parentCategory = categories.find(cat => cat.id === aiSubcategory.parent_category_id);
+                if (parentCategory) {
+                    aiSubcategory.parentCategory = parentCategory;
+                }
+
+                // Process AI subcategory translations
+                let translatedAiName = I18n.t(themePrefix("category.ai.name"));
+                let translatedAiDesc = I18n.t(themePrefix("category.ai.description"));
+
+                if (translatedAiDesc.indexOf('.theme_translations.') === -1) {
+                    aiSubcategory.description = translatedAiDesc;
+                }
+                if (translatedAiName.indexOf('.theme_translations.') === -1) {
+                    aiSubcategory.name = translatedAiName;
+                }
+
+                // Add to visible categories
+                visibleCategories.push(aiSubcategory);
+            }
 
             this.set('categories', visibleCategories);
         }).catch((error) => {

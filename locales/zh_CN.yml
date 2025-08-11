@@ -52,6 +52,9 @@ zh_CN:
     staff:
       name: "员工"
       description: "私人类别，用于员工讨论。话题仅管理员和版主可见。"
+    ai:
+      name: "AI 人工智能"
+      description: "探索与 QNAP 产品和解决方案相关的人工智能和机器学习讨论。"
   search_banner:
     headline: "欢迎来到 QNAP 社区"
     subhead: "加入我们，分享想法、学习并与 QNAP 爱好者联系"
