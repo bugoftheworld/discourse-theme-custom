@@ -52,7 +52,7 @@ zh_TW:
     staff:
       name: "員工"
       description: "員工討論的私人類別。話題僅對管理員和版主可見。"
-    search_banner:
+  search_banner:
     headline: "歡迎來到 QNAP 社群"
     subhead: "加入我們，分享想法、學習並與 QNAP 愛好者聯繫"
     search_button_text: ""
