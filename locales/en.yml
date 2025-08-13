@@ -24,6 +24,10 @@ en:
       title: "Release Notes"
       description: "Discover the latest features, improvements, and bug fixes in our most recent releases."
       icon: "releaseLogo"
+  category:
+    ai:
+      name: "Artificial Intelligence"
+      description: "Explore AI technology applications in QNAP products, discuss AI features, machine learning solutions, and intelligent data analysis and management."
   search_banner:
     headline: "Welcome to QNAP Community"
     subhead: "Join us to share ideas, learn, and connect with QNAP enthusiasts"

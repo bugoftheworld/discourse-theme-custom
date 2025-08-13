@@ -25,33 +25,9 @@ zh_TW:
       description: "了解我們最新版本中的最新功能、改進和錯誤修復。"
       icon: "releaseLogo"
   category:
-    general:
-      name: "一般"
-      description: "與社群連結，討論有關 NAS 使用和用戶體驗的一般話題。"
-    storage:
-      name: "儲存"
-      description: "從個人用戶到企業，QNAP 提供多功能且可擴展的儲存解決方案。深入討論儲存解決方案，包括硬體推薦、檔案管理策略和數據組織技術。"
-    backup-and-data-protection:
-      name: "備份和數據保護"
-      description: "QNAP 提供各種備份解決方案、數據保護解決方案和災難恢復計劃，以保護您的寶貴信息。"
-    cloud:
-      name: "雲端"
-      description: "探索與 QNAP 雲端儲存整合、同步、雲端服務等相關的話題。"
-    networking:
-      name: "網路"
-      description: "通過 QNAP 的綜合網路和虛擬化 IT 解決方案，實現尖端的網路基礎設施，包括高速連接和虛擬化 IT 室。"
-    surveillance:
-      name: "監控"
-      description: "使用 QNAP NAS 構建全面的監控系統。QNAP 的一體化監控解決方案結合了軟硬體，其單一服務簡化了維護和修理。"
-    mobile-utility:
-      name: "行動應用程式 & 實用工具"
-      description: "使用 QNAP 行動應用程式與實用工具，發現使用 NAS 的新方式與便利方法。"
-    site-feedback:
-      name: "網站反饋"
-      description: "社群功能請求、討論、錯誤報告等的私人類別。話題僅對管理員和版主可見。"
-    staff:
-      name: "員工"
-      description: "員工討論的私人類別。話題僅對管理員和版主可見。"
+    ai:
+      name: "人工智慧"
+      description: "探索人工智慧技術在 QNAP 產品中的應用，討論 AI 功能、機器學習解決方案，以及智能化數據分析與管理。"
   search_banner:
     headline: "歡迎來到 QNAP 社群"
     subhead: "加入我們，分享想法、學習並與 QNAP 愛好者聯繫"
