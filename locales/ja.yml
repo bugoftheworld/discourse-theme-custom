@@ -24,7 +24,8 @@ ja:
       title: "リリースノート"
       description: "最新のリリースでの新機能、改善点、バグ修正を発見しましょう。"
       icon: "releaseLogo"
-  category:ai:
+  category:
+    ai:
       name: "人工知能"
       description: "QNAP製品におけるAI技術の応用を探索し、AI機能、機械学習ソリューション、インテリジェントなデータ分析と管理について議論します。"
   search_banner:
