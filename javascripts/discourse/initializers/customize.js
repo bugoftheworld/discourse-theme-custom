@@ -71,7 +71,7 @@ export default {
             };
 
             const updateLangs = (langs = []) => {
-                langs.forEach(({wrap, selector, order, content}) => {
+                langs.forEach(({ wrap, selector, order, content }) => {
                     if (order === 'all') {
                         const elements = document.querySelectorAll(wrap);
                         for (let i = 0; i < elements.length; i++) {
@@ -83,11 +83,11 @@ export default {
                     } else {
                         const wrapperElement = document.querySelector(wrap);
                         if (wrapperElement) {
-                            const elements = wrapperElement.querySelectorAll(selector);
-                            if (elements && elements.length > order) {
+                            const elements = wrapperElement.querySelector(selector);
+                            if (elements[order]) {
                                 elements[order].innerHTML = content;
-                            } else if (elements && elements.length > 0) {
-                                elements[0].innerHTML = content;
+                            } else {
+                                elements.innerHTML = content;
                             }
                         }
                     }
@@ -150,8 +150,6 @@ export default {
 
                 main.classList.add("discourse-theme--q");
 
-                console.log('isHomepage--', isHomepage);
-
                 if (isHomepage) {
                     applicationController.set("showSidebar", false);
                     main.classList.add("isHomepage");
@@ -185,8 +183,8 @@ export default {
                                 content: I18n.t(themePrefix("features_list.latest.all"))
                             },
                             {
-                                wrap: ".custom-search-banner-wrap",
-                                selector: "h1",
+                                wrap: ".custom-search-banner-headline",
+                                selector: "div",
                                 order: 0,
                                 content: I18n.t(themePrefix("search_banner.headline"))
                             },
@@ -223,7 +221,6 @@ export default {
                         ]);
 
                         const searchBanner = document.querySelector(".custom-search-banner-wrap");
-                        console.log('fine--search bar', searchBanner);
                         searchBanner.classList.add("active");
 
                         // const featureListLatest = document.querySelectorAll(".feature-list-latest");
