@@ -67,7 +67,7 @@ export default {
                 });
 
                 // Start observing attribute changes on the button
-                observer.observe(button, {attributes: true});
+                observer.observe(button, { attributes: true });
             };
 
             const updateLangs = (langs = []) => {
@@ -149,6 +149,9 @@ export default {
                 }
 
                 main.classList.add("discourse-theme--q");
+
+                console.log('isHomepage--', isHomepage);
+
                 if (isHomepage) {
                     applicationController.set("showSidebar", false);
                     main.classList.add("isHomepage");
@@ -220,6 +223,7 @@ export default {
                         ]);
 
                         const searchBanner = document.querySelector(".custom-search-banner-wrap");
+                        console.log('fine--search bar', searchBanner);
                         searchBanner.classList.add("active");
 
                         // const featureListLatest = document.querySelectorAll(".feature-list-latest");
