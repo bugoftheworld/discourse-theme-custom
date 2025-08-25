@@ -53,7 +53,7 @@ sv:
       name: "Personal"
       description: "En privat kategori för personaldiskussioner. Ämnen är endast synliga för administratörer och moderatorer."
   search_banner:
-    headline: "Välkommen till QNAP Community"
+    qnap_headline: "Välkommen till QNAP Community"
     subhead: "Gå med oss för att dela idéer, lära dig och ansluta med QNAP-entusiaster"
     search_button_text: ""
   features_list:

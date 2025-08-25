@@ -53,7 +53,7 @@ it:
       name: "Personale"
       description: "Una categoria privata per le discussioni dello staff. Gli argomenti sono visibili solo agli amministratori e ai moderatori."
   search_banner:
-    headline: "Benvenuto nella Community di QNAP"
+    qnap_headline: "Benvenuto nella Community di QNAP"
     subhead: "Unisciti a noi per condividere idee, imparare e connetterti con gli appassionati di QNAP"
     search_button_text: ""
   features_list:

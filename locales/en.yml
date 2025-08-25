@@ -29,7 +29,7 @@ en:
       name: "Artificial Intelligence"
       description: "Explore AI technology applications in QNAP products, discuss AI features, machine learning solutions, and intelligent data analysis and management."
   search_banner:
-    headline: "Welcome to QNAP Community"
+    qnap_headline: "Welcome to QNAP Community"
     subhead: "Join us to share ideas, learn, and connect with QNAP enthusiasts"
     search_button_text: ""
   features_list:

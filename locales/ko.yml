@@ -53,7 +53,7 @@ ko:
       name: "직원"
       description: "직원 토론을 위한 비공개 카테고리입니다. 주제는 관리자와 중재자만 볼 수 있습니다."
   search_banner:
-    headline: "QNAP 커뮤니티에 오신 것을 환영합니다"
+    qnap_headline: "QNAP 커뮤니티에 오신 것을 환영합니다"
     subhead: "아이디어를 공유하고 배우며 QNAP 애호가들과 연결하세요"
     search_button_text: ""
   features_list:

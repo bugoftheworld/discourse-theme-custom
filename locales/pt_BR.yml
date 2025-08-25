@@ -53,7 +53,7 @@ pt_BR:
       name: "Equipe"
       description: "Uma categoria privada para discussões da equipe. Os tópicos são visíveis apenas para administradores e moderadores."
   search_banner:
-    headline: "Bem-vindo à Comunidade QNAP"
+    qnap_headline: "Bem-vindo à Comunidade QNAP"
     subhead: "Junte-se a nós para compartilhar ideias, aprender e conectar-se com entusiastas da QNAP"
     search_button_text: ""
   features_list:

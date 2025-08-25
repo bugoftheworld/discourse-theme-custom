@@ -188,7 +188,7 @@ export default {
                                 wrap: ".custom-search-banner-wrap",
                                 selector: "h1",
                                 order: 0,
-                                content: I18n.t(themePrefix("search_banner.headline"))
+                                content: I18n.t(themePrefix("search_banner.qnap_headline"))
                             },
                             {
                                 wrap: ".custom-search-banner-wrap",

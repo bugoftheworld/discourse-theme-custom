@@ -29,7 +29,7 @@ ja:
       name: "人工知能"
       description: "QNAP製品におけるAI技術の応用を探索し、AI機能、機械学習ソリューション、インテリジェントなデータ分析と管理について議論します。"
   search_banner:
-    headline: "QNAPコミュニティへようこそ"
+    qnap_headline: "QNAPコミュニティへようこそ"
     subhead: "アイデアを共有し、学び、QNAP愛好者とつながりましょう"
     search_button_text: ""
   features_list:
