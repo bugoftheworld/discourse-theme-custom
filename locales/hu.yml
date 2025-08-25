@@ -53,7 +53,7 @@ hu:
       name: "Munkatársak"
       description: "Egy privát kategória a munkatársak megbeszéléseihez. A témák csak az adminisztrátorok és moderátorok számára láthatók."
   search_banner:
-    qnap_headline: "Üdvözöljük a QNAP Közösségben"
+    headline: "Üdvözöljük a QNAP Közösségben"
     subhead: "Csatlakozzon hozzánk, ossza meg ötleteit, tanuljon és kapcsolódjon QNAP rajongókhoz"
     search_button_text: ""
   features_list:

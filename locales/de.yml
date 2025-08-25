@@ -53,7 +53,7 @@ de:
       name: "Mitarbeiter"
       description: "Eine private Kategorie für Mitarbeiterdiskussionen. Themen sind nur für Administratoren und Moderatoren sichtbar."
   search_banner:
-    qnap_headline: "Willkommen in der QNAP Community"
+    headline: "Willkommen in der QNAP Community"
     subhead: "Treten Sie uns bei, teilen Sie Ihre Ideen, lernen Sie und vernetzen Sie sich mit QNAP-Enthusiasten"
     search_button_text: ""
   features_list:

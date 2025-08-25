@@ -53,7 +53,7 @@ da:
       name: "Personale"
       description: "En privat kategori for personale-diskussioner. Emner er kun synlige for administratorer og moderatorer."
   search_banner:
-    qnap_headline: "Velkommen til QNAP Fællesskabet"
+    headline: "Velkommen til QNAP Fællesskabet"
     subhead: "Bliv medlem, del dine idéer, lær og forbind med QNAP-entusiaster"
     search_button_text: ""
   features_list:

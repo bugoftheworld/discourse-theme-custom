@@ -53,7 +53,7 @@ zh_CN:
       name: "员工"
       description: "私人类别，用于员工讨论。话题仅管理员和版主可见。"
   search_banner:
-    qnap_headline: "欢迎来到 QNAP 社区"
+    headline: "欢迎来到 QNAP 社区"
     subhead: "加入我们，分享想法、学习并与 QNAP 爱好者联系"
     search_button_text: ""
   features_list:

@@ -53,7 +53,7 @@ vi:
       name: "Nhân viên"
       description: "Một danh mục riêng tư cho các cuộc thảo luận của nhân viên. Các chủ đề chỉ hiển thị cho quản trị viên và người điều hành."
   search_banner:
-    qnap_headline: "Chào mừng đến với Cộng đồng QNAP"
+    headline: "Chào mừng đến với Cộng đồng QNAP"
     subhead: "Tham gia cùng chúng tôi để chia sẻ ý tưởng, học hỏi và kết nối với những người đam mê QNAP"
     search_button_text: ""
   features_list:

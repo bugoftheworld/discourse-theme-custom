@@ -53,7 +53,7 @@ pl_PL:
       name: "Personel"
       description: "Prywatna kategoria do dyskusji personelu. Tematy widoczne tylko dla administratorów i moderatorów."
   search_banner:
-    qnap_headline: "Witamy w Społeczności QNAP"
+    headline: "Witamy w Społeczności QNAP"
     subhead: "Dołącz do nas, aby dzielić się pomysłami, uczyć się i łączyć z entuzjastami QNAP"
     search_button_text: ""
   features_list:

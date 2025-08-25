@@ -53,7 +53,7 @@ tr_TR:
       name: "Personel"
       description: "Personel tartışmaları için özel bir kategori. Konular yalnızca yöneticiler ve moderatörler tarafından görülebilir."
   search_banner:
-    qnap_headline: "QNAP Topluluğuna Hoş Geldiniz"
+    headline: "QNAP Topluluğuna Hoş Geldiniz"
     subhead: "Fikirlerinizi paylaşmak, öğrenmek ve QNAP meraklılarıyla bağlantı kurmak için bize katılın"
     search_button_text: ""
   features_list:

@@ -29,7 +29,7 @@ zh_TW:
       name: "人工智慧"
       description: "探索人工智慧技術在 QNAP 產品中的應用，討論 AI 功能、機器學習解決方案，以及智能化數據分析與管理。"
   search_banner:
-    qnap_headline: "歡迎來到 QNAP 社群"
+    headline: "歡迎來到 QNAP 社群"
     subhead: "加入我們，分享想法、學習並與 QNAP 愛好者聯繫"
     search_button_text: ""
   features_list:
