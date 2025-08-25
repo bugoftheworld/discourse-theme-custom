@@ -183,8 +183,8 @@ export default {
                                 content: I18n.t(themePrefix("features_list.latest.all"))
                             },
                             {
-                                wrap: ".custom-search-banner-headline",
-                                selector: "div",
+                                wrap: ".custom-search-banner-wrap",
+                                selector: ".custom-search-banner-headline",
                                 order: 0,
                                 content: I18n.t(themePrefix("search_banner.headline"))
                             },
