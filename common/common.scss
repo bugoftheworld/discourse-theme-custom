@@ -252,6 +252,7 @@ sup {
   }
 
   .custom-search-banner-wrap {
+    .custom-search-banner-headline,
     h1,
     p,
     .search-menu,
@@ -259,7 +260,7 @@ sup {
       opacity: 0;
     }
     &.active {
-      h1 {
+      h1,.custom-search-banner-headline {
         animation: fadeInDown 0.4s ease-in 0.2s forwards;
       }
       p {
