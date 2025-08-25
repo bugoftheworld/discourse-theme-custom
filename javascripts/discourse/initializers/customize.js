@@ -83,11 +83,11 @@ export default {
                     } else {
                         const wrapperElement = document.querySelector(wrap);
                         if (wrapperElement) {
-                            const elements = wrapperElement.querySelector(selector);
-                            if (elements[order]) {
+                            const elements = wrapperElement.querySelectorAll(selector);
+                            if (elements && elements.length > order) {
                                 elements[order].innerHTML = content;
-                            } else {
-                                elements.innerHTML = content;
+                            } else if (elements && elements.length > 0) {
+                                elements[0].innerHTML = content;
                             }
                         }
                     }
