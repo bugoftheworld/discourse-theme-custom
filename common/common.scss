@@ -18,6 +18,17 @@ body {
   .below-footer-outlet.custom-footer {
     order: 4;
   }
+  //custom search banner
+  .custom-search-banner-wrap {
+    h1 {
+      font-size: 2.5rem;
+      color: #000;
+    }
+    p {
+      color: #000;
+      margin-bottom: 1em;
+    }
+  }
 }
 $custom-primary: #1b72e7;
 $search-primary: #3c4043;
@@ -73,10 +84,6 @@ div.before-header-panel-outlet {
   .container.list-container {
     display: none;
   }
-}
-
-body .below-site-header-outlet.search-banner {
-  background: #0174e1;
 }
 
 sub,
@@ -281,7 +288,7 @@ sup {
 
   .custom-search-banner-wrap,
   body.has-sidebar-page .custom-search-banner-wrap.wrap {
-    padding: 2em 80px;
+    padding: 2rem 80px 0 80px;
   }
 
   .user-preferences .form-vertical .control-group.home {

@@ -16,7 +16,6 @@ body.has-sidebar-page div.wrap,
 #main-outlet-wrapper {
   max-width: inherit;
   padding: 0 6%;
-  margin-top: 40px;
   @media screen and (min-width: 1920px) {
     padding: 0;
     width: 1640px;
@@ -30,6 +29,9 @@ html body #main-outlet {
   @media screen and (max-width: 768px) {
     padding: 1.5em;
     margin-bottom: 3rem !important;
+  }
+  .q-container:nth-child(1) {
+    margin-top: 0;
   }
 }
 .custom-footer .wrap {
@@ -103,7 +105,7 @@ ul.status-content {
   transition: all 0.2s;
   visibility: visible;
   height: auto;
-  color: #e5e5e8;
+  color: #000;
   li {
     padding: 0 2rem;
     text-align: center;
@@ -330,16 +332,5 @@ html:not(.anon) #topic-footer-buttons .topic-footer-main-buttons {
   @media screen and (max-width: 768px) {
     min-width: auto;
     padding: 8px 12px;
-  }
-}
-//custom search banner
-body .custom-search-banner-wrap {
-  h1 {
-    font-size: 2.5rem;
-    color: #000;
-  }
-  p {
-    color: #000;
-    margin-bottom: 1em;
   }
 }
