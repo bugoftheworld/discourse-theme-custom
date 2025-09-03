@@ -1,4 +1,4 @@
-html body{
+html body {
   .background-container {
     background-color: white;
   }
@@ -153,15 +153,23 @@ div.adduser-content {
   }
 }
 ul.cards-content {
+  justify-content: center;
   li {
+    width: inherit;
+    margin-right: 12px;
+    > div > div {
+      padding: 10px 24px;
+      border-radius: 50px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
     @media screen and (max-width: 1000px) {
       width: 100%;
       margin-bottom: 1rem;
     }
-    width: 32%;
   }
   a {
     color: #3c4043;
+    display: flex;
     &:hover {
       color: $custom-primary;
       p {
@@ -170,17 +178,16 @@ ul.cards-content {
     }
   }
   h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  p {
     font-size: 1rem;
-    color: $desc;
+  }
+
+  figure {
+    margin: 0 12px 0 0;
   }
 
   .icon {
-    width: 100px;
-    height: 100px;
+    width: 28px;
+    height: 28px;
     margin: 0 auto;
     &.blogLogo {
       background: url($blogLogo);
@@ -323,5 +330,16 @@ html:not(.anon) #topic-footer-buttons .topic-footer-main-buttons {
   @media screen and (max-width: 768px) {
     min-width: auto;
     padding: 8px 12px;
+  }
+}
+//custom search banner
+body .custom-search-banner-wrap {
+  h1 {
+    font-size: 2.5rem;
+    color: #000;
+  }
+  p {
+    color: #000;
+    margin-bottom: 1em;
   }
 }
