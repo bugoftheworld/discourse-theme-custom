@@ -260,7 +260,8 @@ sup {
       opacity: 0;
     }
     &.active {
-      h1,.custom-search-banner-headline {
+      h1,
+      .custom-search-banner-headline {
         animation: fadeInDown 0.4s ease-in 0.2s forwards;
       }
       p {
@@ -275,6 +276,12 @@ sup {
         z-index: 0;
       }
     }
+    color: #000000;
+  }
+
+  .custom-search-banner-wrap,
+  body.has-sidebar-page .custom-search-banner-wrap.wrap {
+    padding: 2em 80px;
   }
 
   .user-preferences .form-vertical .control-group.home {
@@ -282,10 +289,7 @@ sup {
   }
 
   .custom-search-banner {
-    background-image: url($kvBackGround);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #eff6ff 0%, #ffffff 100%);
   }
 
   .featured-lists__list-header {
