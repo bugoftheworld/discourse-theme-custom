@@ -158,6 +158,17 @@ export default {
                         const data = await response.json();
                         const topics = data.topic_list.topics;
                         const locale = I18n.currentLocale();
+
+                        if (topics) {
+                            const featureListWrapper = document.getElementsByClassName("featured-lists__wrapper");
+                            const featureListContainer = document.getElementsByClassName("featured-lists__list-container");
+                            for (let i = 0; i < featureListWrapper.length; i++) {
+                                featureListWrapper[i].classList.add("full-width");
+                            }
+                            for (let i = 0; i < featureListContainer.length; i++) {
+                                featureListContainer[i].classList.add("contents");
+                            }
+                        }
                         updateLangs([
                             {
                                 wrap: ".featured-lists__list-header",

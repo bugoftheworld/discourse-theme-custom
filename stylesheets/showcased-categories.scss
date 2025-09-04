@@ -13,6 +13,9 @@
 }
 
 .showcased-categories-sidebar {
+  .full-width .contents .topic-list {
+    display: unset;
+  }
 
   .two-topic-list-sidebar {
     .topic-excerpt {
