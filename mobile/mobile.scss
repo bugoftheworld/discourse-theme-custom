@@ -163,14 +163,6 @@ ol.category-breadcrumb {
   border-bottom-right-radius: 8px;
 }
 
-.full-width .contents .topic-list .topic-list-header tr {
-  background-color: var(--secondary);
-  border-radius: 8px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(var(--primary-rgb), 0.1);
-  margin-bottom: 1em;
-}
-
 .topic-list .topic-item-stats {
   flex-wrap: wrap;
 }
@@ -179,22 +171,6 @@ ol.category-breadcrumb {
   order: 3;
   width: 100%;
   margin-top: 0.5em;
-}
-
-.full-width .contents .topic-list .topic-list-item .posts-map {
-  padding: 0;
-  .number {
-    margin: 0;
-  }
-}
-
-.full-width
-  .contents
-  .topic-list
-  .topic-list-body
-  .topic-list-item
-  .topic-list-data.posts {
-  width: unset;
 }
 
 .topic-list .topic-list-header .topic-list-data,

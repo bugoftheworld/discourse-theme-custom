@@ -116,23 +116,6 @@ sup {
     border-bottom: 0;
   }
 
-  .full-width .contents .topic-list .topic-list-body .topic-list-item.visited {
-    border: 0;
-  }
-  .full-width .contents .topic-list .topic-list-body .topic-list-item {
-    background-color: $homepageBlockBg;
-    border: 0px;
-    box-shadow: inherit;
-    margin-bottom: 0.75rem;
-  }
-
-  .full-width .contents .topic-list .topic-list-body .topic-list-item:hover {
-    background-color: #f8f8fa;
-    box-shadow: inherit;
-    border: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
-  }
-
   .list-controls .combo-box .combo-box-header {
     border: 0px;
     background-color: #f5f5f8;
