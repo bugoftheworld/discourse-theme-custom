@@ -82,7 +82,7 @@ html body #main-outlet {
       }
     }
   }
-  &.news-card li>div{
+  &.news-card li > div {
     border: 2px solid #e5e7eb;
     border-radius: 12.75px;
     padding: 20px;
@@ -111,6 +111,10 @@ html body #main-outlet {
       border-radius: 6px;
     }
 
+    h3 {
+      color: #101828;
+    }
+
     .news-content {
       color: #4a5565;
       display: -webkit-box;
@@ -121,6 +125,14 @@ html body #main-outlet {
       max-height: 7.5em;
       line-height: 1.5em;
       margin: 0 0 0.5em 0;
+    }
+    .news-date-link{
+        display: flex;
+        align-items: center;
+        .news-date{
+            display: flex;
+            align-items: center;
+        }
     }
   }
 }
