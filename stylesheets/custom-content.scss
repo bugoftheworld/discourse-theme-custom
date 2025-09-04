@@ -3,8 +3,8 @@ html body {
     background-color: white;
   }
 }
-
 body.has-sidebar-page div.wrap,
+.d-header > .wrap,
 .wrap {
   max-width: inherit;
   padding: 0 6%;
