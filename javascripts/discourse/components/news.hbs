@@ -1,16 +1,18 @@
 <div class="q-container">
   <div>
     <h2>{{theme-i18n "news.title"}}</h2>
-    <ul class="news-content card-type">
+    <ul class="news-content card-type text-start" style="border-radius: 0;">
       {{#each this.news as |new|}}
         <li>
-          <div style="border:2px solid #E5E7EB;border-radius: 12.75px;">
+          <div
+            style="border:2px solid #E5E7EB;border-radius: 12.75px;padding: 20px;"
+          >
             <div class="new">
               <div>
-                <figure>
+                <figure style="display: flex;align-items: center;">
                   <div
                     style="background-color: #DBEAFE;padding: 16px;border-radius: 8.75px;
-                    padding-right: .5rem;"
+                    margin-right: .5rem;"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -30,13 +32,13 @@
                   </div>
                   <figcaption
                     class="label"
-                    style="background-color: #155DFC;color:white;padding:2.75px 8px;"
+                    style="background-color: #155DFC;color:white;padding:2.75px 8px;height: fit-content;border-radius: 6px;"
                   >news</figcaption>
                 </figure>
                 <div class="texts">
                   <h3>{{new.title}}</h3>
                   <p
-                    style="display: -webkit-box;
+                    style="color:#4A5565;display: -webkit-box;
                     -webkit-line-clamp: 5;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
