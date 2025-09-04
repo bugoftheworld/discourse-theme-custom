@@ -82,6 +82,47 @@ html body #main-outlet {
       }
     }
   }
+  &.news-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 12.75px;
+    padding: 20px;
+
+    .new {
+      border-radius: 0;
+    }
+
+    figure {
+      display: flex;
+      align-items: center;
+    }
+
+    .news-icon-bg {
+      background-color: #dbeafe;
+      padding: 8px;
+      border-radius: 8.75px;
+      margin-right: 0.5rem;
+    }
+
+    .label {
+      background-color: #155dfc;
+      color: white;
+      padding: 2.75px 8px;
+      height: fit-content;
+      border-radius: 6px;
+    }
+
+    .news-content {
+      color: #4a5565;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 7.5em;
+      line-height: 1.5em;
+      margin: 0 0 0.5em 0;
+    }
+  }
 }
 .q-container {
   margin: 1rem 0 2rem 0;

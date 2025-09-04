@@ -1,19 +1,14 @@
 <div class="q-container">
   <div>
     <h2>{{theme-i18n "news.title"}}</h2>
-    <ul class="news-content card-type text-start" style="border-radius: 0;">
+    <ul class="news-content card-type news-card">
       {{#each this.news as |new|}}
         <li>
-          <div
-            style="border:2px solid #E5E7EB;border-radius: 12.75px;padding: 20px;"
-          >
+          <div>
             <div class="new">
               <div>
-                <figure style="display: flex;align-items: center;">
-                  <div
-                    style="background-color: #DBEAFE;padding: 16px;border-radius: 8.75px;
-                    margin-right: .5rem;"
-                  >
+                <figure>
+                  <div class="news-icon-bg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -30,24 +25,12 @@
                       />
                     </svg>
                   </div>
-                  <figcaption
-                    class="label"
-                    style="background-color: #155DFC;color:white;padding:2.75px 8px;height: fit-content;border-radius: 6px;"
-                  >news</figcaption>
+                  <figcaption class="label">news</figcaption>
                 </figure>
                 <div class="texts">
                   <h3>{{new.title}}</h3>
-                  <p
-                    style="color:#4A5565;display: -webkit-box;
-                    -webkit-line-clamp: 5;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    max-height: 7.5em;
-                    line-height: 1.5em;
-                    margin: 0 0 0.5em 0;"
-                  >{{new.content}}</p>
-                  <div>
+                  <p class="news-content">{{new.content}}</p>
+                  <div class="news-date-link">
                     <span>{{new.date}}</span>
                     <a
                       href="https://www.qnap.com{{new.url}}"
