@@ -82,7 +82,7 @@ html body #main-outlet {
       }
     }
   }
-  &.news-card {
+  &.news-card li>div{
     border: 2px solid #e5e7eb;
     border-radius: 12.75px;
     padding: 20px;
