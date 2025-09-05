@@ -95,7 +95,7 @@ html body #main-outlet {
       }
       width: 32%;
       > div {
-        border: 2px solid #e5e7eb;
+        border: 2px solid #DBEAFE;
         border-radius: 12.75px;
         padding: 20px;
 
@@ -144,10 +144,10 @@ html body #main-outlet {
         }
 
         h3 {
-          color: #101828;
-          font-size: 1rem;
+          font-size: 14px;
+          line-height: 20px;
           font-weight: 600;
-          color: $search-primary;
+          color: #101828;
           text-align: left;
           display: -webkit-box;
           -webkit-line-clamp: 3;
@@ -160,7 +160,8 @@ html body #main-outlet {
         }
 
         .news-content {
-          font-size: 1rem;
+          font-size: 14px;
+          line-height: 20px;
           color: #4a5565;
           display: -webkit-box;
           -webkit-line-clamp: 5;
@@ -168,7 +169,6 @@ html body #main-outlet {
           overflow: hidden;
           text-overflow: ellipsis;
           max-height: 7.5em;
-          line-height: 1.5em;
           margin: 0 0 2em 0;
           text-align: left;
         }
@@ -177,11 +177,15 @@ html body #main-outlet {
           display: flex;
           align-items: center;
           justify-content: space-between;
+          font-weight: normal;
           .news-date {
             display: flex;
             align-items: center;
             color:#6A7282;
             font-size: 12px;
+            svg{
+                margin-right: .5rem;
+            }
           }
           a{
             font-size: 12px;
