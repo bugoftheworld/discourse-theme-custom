@@ -95,7 +95,7 @@ html body #main-outlet {
       }
       width: 32%;
       > div {
-        border: 2px solid #DBEAFE;
+        border: 2px solid #dbeafe;
         border-radius: 12.75px;
         padding: 20px;
 
@@ -131,7 +131,7 @@ html body #main-outlet {
           padding: 8px;
           border-radius: 8.75px;
           margin-right: 0.5rem;
-          line-height: .5;
+          line-height: 0.5;
         }
 
         .label {
@@ -181,13 +181,13 @@ html body #main-outlet {
           .news-date {
             display: flex;
             align-items: center;
-            color:#6A7282;
+            color: #6a7282;
             font-size: 12px;
-            svg{
-                margin-right: .5rem;
+            svg {
+              margin-right: 0.5rem;
             }
           }
-          a{
+          a {
             font-size: 12px;
           }
         }
@@ -206,6 +206,12 @@ html body #main-outlet {
     font-weight: 500;
     color: $search-primary;
     margin: 60px 0px 30px;
+  }
+  h2 + p {
+    text-align: center;
+    color: #4a5565;
+    margin-bottom: 40px;
+    margin-top: -10px;
   }
 }
 ul.status-content {
