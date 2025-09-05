@@ -82,57 +82,112 @@ html body #main-outlet {
       }
     }
   }
-  &.news-card li > div {
-    border: 2px solid #e5e7eb;
-    border-radius: 12.75px;
-    padding: 20px;
-
-    .new {
-      border-radius: 0;
-    }
-
-    figure {
-      display: flex;
-      align-items: center;
-    }
-
-    .news-icon-bg {
-      background-color: #dbeafe;
-      padding: 8px;
-      border-radius: 8.75px;
-      margin-right: 0.5rem;
-    }
-
-    .label {
-      background-color: #155dfc;
-      color: white;
-      padding: 2.75px 8px;
-      height: fit-content;
-      border-radius: 6px;
-    }
-
-    h3 {
-      color: #101828;
-    }
-
-    .news-content {
-      color: #4a5565;
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-height: 7.5em;
-      line-height: 1.5em;
-      margin: 0 0 0.5em 0;
-    }
-    .news-date-link{
+  &.news-card {
+    li {
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+        margin-bottom: 1rem;
         display: flex;
-        align-items: center;
-        .news-date{
+        justify-content: center;
+        .new {
+          max-width: 300px;
+        }
+      }
+      width: 32%;
+      > div {
+        border: 2px solid #e5e7eb;
+        border-radius: 12.75px;
+        padding: 20px;
+
+        .new {
+          border-radius: 0;
+          padding: 0;
+          height: 100%;
+          justify-content: space-between;
+          display: flex;
+          flex-direction: column;
+        }
+        .texts {
+          padding-top: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        figure {
+          display: flex;
+          align-items: center;
+          margin: 0;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+
+        .news-icon-bg {
+          background-color: #dbeafe;
+          padding: 8px;
+          border-radius: 8.75px;
+          margin-right: 0.5rem;
+          line-height: .5;
+        }
+
+        .label {
+          background-color: #155dfc;
+          color: white;
+          padding: 2.75px 8px;
+          height: fit-content;
+          border-radius: 6px;
+          font-size: 10px;
+        }
+
+        h3 {
+          color: #101828;
+          font-size: 1rem;
+          font-weight: 600;
+          color: $search-primary;
+          text-align: left;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          max-height: 6.5rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          margin-bottom: 2rem;
+        }
+
+        .news-content {
+          font-size: 1rem;
+          color: #4a5565;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-height: 7.5em;
+          line-height: 1.5em;
+          margin: 0 0 2em 0;
+          text-align: left;
+        }
+
+        .news-date-link {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .news-date {
             display: flex;
             align-items: center;
+            color:#6A7282;
+            font-size: 12px;
+          }
+          a{
+            font-size: 12px;
+          }
         }
+      }
     }
   }
 }
@@ -296,68 +351,6 @@ ul#category-content {
         white-space: normal;
         color: $desc;
       }
-    }
-  }
-}
-ul.news-content {
-  li {
-    @media screen and (max-width: 1000px) {
-      width: 100%;
-      margin-bottom: 1rem;
-      display: flex;
-      justify-content: center;
-      .new {
-        max-width: 300px;
-      }
-    }
-    width: 32%;
-    .new {
-      padding: 0;
-      height: 100%;
-      justify-content: space-between;
-      display: flex;
-      flex-direction: column;
-    }
-    .texts {
-      padding: 1rem 1rem 0rem 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    a {
-      color: $custom-primary;
-      display: block;
-      text-align: right;
-      margin-top: 2rem;
-      padding: 0rem 1rem 1rem 1rem;
-      &:hover {
-        color: #00d0ff;
-      }
-    }
-  }
-  h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: $search-primary;
-    text-align: left;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    max-height: 6.5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-  }
-  p {
-    font-size: 1rem;
-  }
-  figure {
-    margin: 0;
-    img {
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-      object-position: center;
     }
   }
 }
