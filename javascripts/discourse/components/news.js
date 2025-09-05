@@ -51,7 +51,7 @@ export default Component.extend({
         }).then((data) => {
             let news = data.data;
             news.sort((a, b) => new Date(b.date) - new Date(a.date));
-            news.splice(3);
+            news.splice(6);
             this.set('news', news);
         }).catch((error) => {
             console.error('Error fetching:', error);
