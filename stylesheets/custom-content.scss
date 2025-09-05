@@ -91,6 +91,7 @@ html body #main-outlet {
   }
   &.news-card {
     li {
+      width: 32%;
       @media screen and (max-width: 1000px) {
         width: 100%;
         margin-bottom: 1rem;
@@ -100,12 +101,12 @@ html body #main-outlet {
           max-width: 300px;
         }
       }
-      width: 32%;
       > div {
         border: 2px solid #dbeafe;
         border-radius: 12.75px;
         padding: 20px;
         background-color: white;
+        height: inherit;
 
         .new {
           border-radius: 0;
@@ -225,6 +226,7 @@ html body #main-outlet {
   &.news-section-block {
     position: relative;
     padding-top: 40px;
+    margin-bottom: 0;
     &:before {
       content: "";
       position: absolute;
