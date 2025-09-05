@@ -31,8 +31,6 @@ body.has-sidebar-page div.wrap,
 html body #main-outlet {
   max-width: inherit;
   background: #ffffff;
-  padding: 3em 3em 3%;
-  padding-bottom: 3% !important;
   @media screen and (max-width: 768px) {
     padding: 1.5em;
     margin-bottom: 3rem !important;

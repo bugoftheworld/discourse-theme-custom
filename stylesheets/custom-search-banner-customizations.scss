@@ -287,7 +287,6 @@ html body #main-outlet {
     padding: 1.5em;
     margin-top: 0;
   }
-  padding-bottom: 5% !important; //overriding inline style
   @include box-shadow;
   @media screen and (max-width: 1120px) {
     width: 80%;
