@@ -213,7 +213,7 @@ sup {
 
   .featured-lists__wrapper.above-main-container {
     margin-bottom: 40px;
-    .create-topic {
+    #create-topic {
       border-radius: 50px;
       padding: 8px 12px;
       color: white;
@@ -222,6 +222,9 @@ sup {
         background-color: #006cbf;
       }
     }
+    .feed-link {
+        margin-top: 0;
+    }
   }
 
   .feed-link {
@@ -229,6 +232,8 @@ sup {
     padding: 8px 12px;
     color: #2f2f2f;
     border: 1px solid #cccccc;
+    margin-top: 2rem;
+    display: inline-block;
     &:hover {
       border: 1px solid $custom-primary;
       color: $custom-primary;
