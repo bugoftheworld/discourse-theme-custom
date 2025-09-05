@@ -104,7 +104,7 @@ sup {
 }
 
 .discourse-theme--q {
-    overflow: hidden;
+  overflow: hidden;
   #main-outlet-wrapper {
     .sidebar-wrapper {
       background-color: #ffffff;
@@ -117,7 +117,7 @@ sup {
     background: #ffffff;
   }
 
-  .topic-list .topic-list-item .topic-list-data{
+  .topic-list .topic-list-item .topic-list-data {
     padding: 12px;
   }
 
@@ -213,6 +213,26 @@ sup {
 
   .featured-lists__wrapper.above-main-container {
     margin-bottom: 40px;
+    .create-topic {
+      border-radius: 50px;
+      padding: 8px 12px;
+      color: white;
+      background-color: $custom-primary;
+      &:hover {
+        background-color: #006cbf;
+      }
+    }
+  }
+
+  .feed-link {
+    border-radius: 50px;
+    padding: 8px 12px;
+    color: #2f2f2f;
+    border: 1px solid #cccccc;
+    &:hover {
+      border: 1px solid $custom-primary;
+      color: $custom-primary;
+    }
   }
 
   .featured-lists__list-header h2 {
