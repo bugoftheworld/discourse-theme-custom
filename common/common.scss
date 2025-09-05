@@ -111,9 +111,12 @@ sup {
       background: #ffffff;
     }
   }
-  .topic-list-item,
-  tr {
-    border-bottom: 0;
+  .topic-list-item {
+    background: #ffffff;
+  }
+
+  .topic-list .topic-list-item .topic-list-data{
+    padding: 12px;
   }
 
   .full-width .contents .topic-list .topic-list-body .topic-list-item.visited {

@@ -215,24 +215,34 @@ html body #main-outlet {
     margin-bottom: 40px;
     margin-top: -10px;
   }
-  &.news-section-block{
+  &.news-section-block {
     position: relative;
-    &:before{
+    padding-top: 40px;
+    &:before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(180deg, #F9FAFB 0%, #EFF6FF 100%);
+      background: linear-gradient(180deg, #f9fafb 0%, #eff6ff 100%);
       z-index: 0;
       width: 9999px;
       height: 9999px;
     }
-    >div{
-        position: relative;
-        z-index: 1;
+    > div {
+      position: relative;
+      z-index: 1;
     }
+    h2 {
+      margin-top: 0px;
+    }
+  }
+  .badge-category__wrapper {
+    border: 1px solid #e7e7e7;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
   }
 }
 ul.status-content {
