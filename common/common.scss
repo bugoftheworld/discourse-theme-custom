@@ -96,6 +96,7 @@ sup {
 
 .custom-footer {
   background: #3c3c3c;
+  z-index: 1;
 }
 
 .topic-list-bottom {
@@ -210,7 +211,7 @@ sup {
   }
 
   .featured-lists__wrapper.above-main-container {
-    margin-bottom: 0;
+    margin-bottom: 40px;
   }
 
   .featured-lists__list-header h2 {
