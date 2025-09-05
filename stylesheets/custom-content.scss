@@ -16,6 +16,7 @@ body.has-sidebar-page div.wrap,
 #main-outlet-wrapper {
   max-width: inherit;
   padding: 0 6%;
+  overflow: hidden;
   @media screen and (min-width: 1920px) {
     padding: 0;
     width: 1640px;
