@@ -90,6 +90,7 @@ html body #main-outlet {
   &.news-card {
     li {
       width: 32%;
+      margin-bottom: 2rem;
       @media screen and (max-width: 1000px) {
         width: 100%;
         margin-bottom: 1rem;
