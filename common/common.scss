@@ -218,8 +218,15 @@ sup {
       padding: 8px 12px;
       color: white;
       background-color: $custom-primary;
+      svg{
+        color: white;
+        margin-right: .5rem;
+      }
       &:hover {
-        background-color: #006cbf;
+        background-color: #1a9cff;
+        svg {
+          color: white;
+        }
       }
     }
     .feed-link {
@@ -238,6 +245,10 @@ sup {
       border: 1px solid $custom-primary;
       color: $custom-primary;
     }
+  }
+
+  .featured-lists__list-header{
+    margin-bottom: 2rem;
   }
 
   .featured-lists__list-header h2 {
