@@ -57,6 +57,7 @@ zh_TW:
       url: "https://view.publitas.com/qnap-1/2022_security_guide_en/page/1"
   news:
     title: "最新消息"
+    description: "了解 QNAP 的最新消息、更新和公告。"
     learn_more: "了解更多"
   footer:
     third_party_forums: "第三方論壇"
