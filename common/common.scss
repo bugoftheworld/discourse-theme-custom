@@ -229,9 +229,6 @@ sup {
         }
       }
     }
-    .feed-link {
-        margin-top: 0;
-    }
   }
 
   .feed-link {
@@ -249,6 +246,10 @@ sup {
 
   .featured-lists__list-header{
     margin-bottom: 2rem;
+
+    .feed-link {
+        margin-top: 0;
+    }
   }
 
   .featured-lists__list-header h2 {
