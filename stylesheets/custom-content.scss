@@ -355,6 +355,9 @@ ul.cards-content {
     &.releaseLogo {
       background: url($releaseLogo);
     }
+    &.aiLogo{
+        background: url($aiLogo);
+    }
   }
 }
 ul#category-content {

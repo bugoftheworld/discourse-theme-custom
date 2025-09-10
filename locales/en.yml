@@ -24,6 +24,11 @@ en:
       title: "Release Notes"
       description: "Discover the latest features, improvements, and bug fixes in our most recent releases."
       icon: "releaseLogo"
+    item4:
+      url: "/c/en/ai/84"
+      title: "AI Discussion"
+      description: ""
+      icon: "aiLogo"
   category:
     ai:
       name: "Artificial Intelligence"
