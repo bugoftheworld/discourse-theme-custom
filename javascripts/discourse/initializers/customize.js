@@ -165,9 +165,9 @@ export default {
                             for (let i = 0; i < featureListWrapper.length; i++) {
                                 featureListWrapper[i].classList.add("full-width");
                             }
-                            for (let i = 0; i < featureListContainer.length; i++) {
-                                featureListContainer[i].classList.add("contents");
-                            }
+                            // for (let i = 0; i < featureListContainer.length; i++) {
+                            //     featureListContainer[i].classList.add("contents");
+                            // }
                         }
                         updateLangs([
                             {
