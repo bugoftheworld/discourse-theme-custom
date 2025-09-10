@@ -4,7 +4,7 @@ body .custom-search-banner-wrap {
   color: var(--secondary);
   h1 {
     font-size: 2.5rem;
-	color: #ffffff;
+    color: #ffffff;
   }
   p {
     color: #e5e5e8;
@@ -278,7 +278,7 @@ html body #main-outlet {
   margin-bottom: 50px;
   background: var(--secondary);
   border-radius: 1em;
-//   padding: 3em 3em 5%;
+  //   padding: 3em 3em 5%;
   max-width: 1150px;
   .archetype-regular & {
     min-height: 500px;
@@ -368,11 +368,11 @@ html body #main-outlet {
       display: flex;
       margin-bottom: 0.5em;
       background-color: var(--secondary);
-    //   border: 1px solid rgba(var(--primary-rgb), 0.2);
+      //   border: 1px solid rgba(var(--primary-rgb), 0.2);
       border-radius: 1em;
       position: relative;
       transition: box-shadow 100ms ease-in-out;
-    //   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+      //   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       &.visited {
         border: 1px solid rgba(var(--primary-rgb), 0.1);
@@ -380,7 +380,7 @@ html body #main-outlet {
           opacity: 0.75;
         }
         &:hover {
-        //   border: 1px solid rgba(var(--primary-rgb), 0.25);
+          //   border: 1px solid rgba(var(--primary-rgb), 0.25);
           .discourse-tag {
             opacity: 1;
           }
@@ -578,7 +578,24 @@ html body #main-outlet {
   padding-left: 14px;
 }
 
-.custom-search-banner-wrap .btn.search-icon:not(.has-search-button-text)+.search-menu-container .search-input {
-    padding-left: 1.75em;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .05);
+.isHomepage .welcome-banner__wrap.search-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .search-menu-container {
+    min-width: 390px;
+    width: inherit;
+  }
+  #custom-search-input {
+    padding: 0 10px;
+  }
+}
+
+.custom-search-banner-wrap
+  .btn.search-icon:not(.has-search-button-text)
+  + .search-menu-container
+  .search-input {
+  padding-left: 1.75em;
+  //   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+  order: 1px solid rgba(0, 0, 0, 0.05);
 }

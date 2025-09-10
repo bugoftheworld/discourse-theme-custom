@@ -318,6 +318,7 @@ ul.cards-content {
       padding: 10px 24px;
       border-radius: 50px;
       border: 1px solid rgba(0, 0, 0, 0.1);
+      height: auto;
     }
     @media screen and (max-width: 1000px) {
       width: 100%;
@@ -327,6 +328,7 @@ ul.cards-content {
   a {
     color: #3c4043;
     display: flex;
+    align-items: center;
     &:hover {
       color: $custom-primary;
       p {
@@ -336,6 +338,7 @@ ul.cards-content {
   }
   h3 {
     font-size: 1rem;
+    margin-bottom: 0;
   }
 
   figure {
