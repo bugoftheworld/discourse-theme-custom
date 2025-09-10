@@ -1,4 +1,5 @@
 .discourse-theme--q .custom-footer {
+  background-color: #101828;
   .first-box {
     width: 20%;
   }
@@ -7,9 +8,10 @@
     .links {
       justify-content: flex-start;
 
-      .list:nth-child(3){
-        >span{
-            opacity: 0;
+      .list:nth-child(3) {
+        > span {
+          opacity: 0;
+          font-size: 14px;
         }
       }
 
@@ -80,6 +82,8 @@
   ul li.footer-section-link-wrapper {
     a {
       color: silver;
+      font-size: 12px;
+      line-height: 16px;
 
       &:hover {
         color: #9ff;
