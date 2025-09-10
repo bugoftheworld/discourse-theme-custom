@@ -6,17 +6,91 @@
         <a href="/latest" class="feed-link">{{theme-i18n
             "features_list.latest.all"
           }}</a>
-        <DButton id="create-topic" class='btn btn-default' {{on "click" (if this.currentUser this.createTopic this.showLogin)}}>
-            <svg class="fa d-icon d-icon-plus svg-icon svg-string" xmlns="http://www.w3.org/2000/svg"><use href="#plus"></use></svg>
-            <span class="d-button-label">{{i18n 'topic.create'}}</span>
+        <DButton
+          id="create-topic"
+          class="btn btn-default"
+          {{on "click" (if this.currentUser this.createTopic this.showLogin)}}
+        >
+          <svg
+            class="fa d-icon d-icon-plus svg-icon svg-string"
+            xmlns="http://www.w3.org/2000/svg"
+          ><use href="#plus"></use></svg>
+          <span class="d-button-label">{{i18n "topic.create"}}</span>
         </DButton>
       </div>
-      <TopicList
+      {{!-- <TopicList
         @topics={{this.filteredTopics}}
         @showPosters="true"
         @showExcerpt="true"
         class="featured-lists__list-body"
-      />
+      /> --}}
+      <table class="topic-list">
+        <tbody>
+          {{#each this.filteredTopics as |topic|}}
+            <tr
+              data-topic-id="{{topic.id}}"
+              class="topic-list-item category-{{topic.category_slug}}
+                {{if topic.excerpt 'has-excerpt'}}"
+            >
+              <td class="main-link topic-list-data" colspan="1">
+                <span class="link-top-line" role="heading" aria-level="2">
+                  <span class="topic-statuses"></span>
+                  <a
+                    href="/t/{{topic.slug}}/{{topic.id}}/1"
+                    data-topic-id="{{topic.id}}"
+                    class="title raw-link raw-topic-link"
+                  >{{topic.title}}</a>
+                  <span class="topic-post-badges"></span>
+                </span>
+                <div class="link-bottom-line">
+                  <a
+                    class="badge-category__wrapper"
+                    href="/c/{{topic.category_slug}}/{{topic.category_id}}"
+                  >
+                    <span
+                      class="badge-category__name"
+                    >{{topic.category_name}}</span>
+                  </a>
+                </div>
+                {{#if topic.excerpt}}
+                  <div class="topic-excerpt">{{topic.excerpt}}</div>
+                {{/if}}
+              </td>
+              <td class="posters topic-list-data">
+                <a
+                  class="latest single"
+                  href="/u/{{topic.last_poster_username}}"
+                  data-user-card="{{topic.last_poster_username}}"
+                >
+                  <img
+                    alt=""
+                    width="24"
+                    height="24"
+                    src="{{topic.last_poster_avatar_template}}"
+                    class="avatar latest single"
+                  />
+                </a>
+              </td>
+              <td class="num posts-map posts topic-list-data">
+                <a href="/t/{{topic.slug}}/{{topic.id}}/1" class="badge-posts">
+                  <span class="number">{{topic.reply_count}}</span>
+                </a>
+              </td>
+              <td class="num views topic-list-data">
+                <span class="number">{{topic.views}}</span>
+              </td>
+              <td class="activity num topic-list-data age">
+                <a
+                  href="/t/{{topic.slug}}/{{topic.id}}/1"
+                  class="post-activity"
+                >
+                  <span class="relative-date">{{topic.last_posted_at}}</span>
+                </a>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
       <div>
         <a href="/latest" class="feed-link">{{theme-i18n
             "features_list.latest.all"
