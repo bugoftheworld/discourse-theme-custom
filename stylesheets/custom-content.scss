@@ -1,3 +1,8 @@
+$blogLogo: "/assets/images/icon-blog.svg";
+$knowledgeLogo: "/assets/images/icon-knowledge.svg";
+$releaseLogo: "/assets/images/icon-release.svg";
+$aiLogo: "/assets/images/icon-ai.svg";
+
 html body {
   .background-container {
     background-color: white;
@@ -359,7 +364,7 @@ ul.cards-content {
       background: url($releaseLogo);
     }
     &.aiLogo{
-        background: url($aiLogo);
+      background: url($aiLogo);
     }
   }
 }
