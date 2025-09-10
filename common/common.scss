@@ -330,6 +330,16 @@ sup {
       .search-menu {
         animation: fadeInDown 0.5s ease-in 0.6s forwards;
         z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .search-menu-container {
+          min-width: 390px;
+          width: inherit;
+        }
+        #custom-search-input {
+          padding: 0 10px;
+        }
       }
       .status-content {
         animation: fadeInDown 0.5s ease-in 0.8s forwards;

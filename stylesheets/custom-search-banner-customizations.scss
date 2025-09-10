@@ -578,19 +578,6 @@ html body #main-outlet {
   padding-left: 14px;
 }
 
-.isHomepage .welcome-banner__wrap .search-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .search-menu-container {
-    min-width: 390px;
-    width: inherit;
-  }
-  #custom-search-input {
-    padding: 0 10px;
-  }
-}
-
 .custom-search-banner-wrap
   .btn.search-icon:not(.has-search-button-text)
   + .search-menu-container
