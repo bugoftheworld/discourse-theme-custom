@@ -7,6 +7,12 @@
     .links {
       justify-content: flex-start;
 
+      .list:nth-child(3){
+        >span{
+            opacity: 0;
+        }
+      }
+
       li {
         margin: 0.5em 0.5em 0.5em 0;
         display: flex;
