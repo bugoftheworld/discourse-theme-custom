@@ -6,8 +6,8 @@ en:
     sign_in: "Sign In"
     register: "Register"
   status:
-    online_users: "online users"
-    posts: "posts"
+    online_users: "User Online Helping Each Other"
+    posts: "Experience Shares"
   cards:
     item1:
       url: "https://blog.qnap.com"
