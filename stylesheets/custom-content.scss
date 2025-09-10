@@ -31,6 +31,7 @@ body.has-sidebar-page div.wrap,
 html body #main-outlet {
   max-width: inherit;
   background: #ffffff;
+  padding: 3em 3em 3%;
   @media screen and (max-width: 768px) {
     padding: 1.5em;
     margin-bottom: 3rem !important;
@@ -39,6 +40,11 @@ html body #main-outlet {
     margin-top: 0;
   }
 }
+
+html body .isHomepage #main-outlet {
+  padding: 0;
+}
+
 .custom-footer .wrap {
   max-width: inherit;
   padding: 0 6%;
