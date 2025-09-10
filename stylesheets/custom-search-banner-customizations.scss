@@ -578,7 +578,7 @@ html body #main-outlet {
   padding-left: 14px;
 }
 
-.isHomepage .welcome-banner__wrap.search-menu {
+.isHomepage .welcome-banner__wrap .search-menu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -596,6 +596,5 @@ html body #main-outlet {
   + .search-menu-container
   .search-input {
   padding-left: 1.75em;
-  //   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
-  order: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
