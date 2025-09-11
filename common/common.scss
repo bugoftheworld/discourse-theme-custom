@@ -128,10 +128,26 @@ sup {
       .select-kit-header-wrapper {
         position: relative;
         &::before {
-          content: '<svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.55786 8.15765C5.75476 7.96081 6.02178 7.85023 6.30021 7.85023C6.57863 7.85023 6.84565 7.96081 7.04256 8.15765L10.5002 11.6153L13.9579 8.15765C14.1559 7.96639 14.4211 7.86055 14.6964 7.86295C14.9717 7.86534 15.2351 7.97577 15.4298 8.17044C15.6244 8.36512 15.7349 8.62848 15.7373 8.90378C15.7397 9.17909 15.6338 9.44432 15.4426 9.64235L11.2426 13.8424C11.0457 14.0392 10.7786 14.1498 10.5002 14.1498C10.2218 14.1498 9.95476 14.0392 9.75786 13.8424L5.55786 9.64235C5.36101 9.44545 5.25043 9.17843 5.25043 8.9C5.25043 8.62158 5.36101 8.35456 5.55786 8.15765Z" fill="#646464"/></svg>';
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-right: 1.5px solid #646464;
+          border-bottom: 1.5px solid #646464;
+          transform: rotate(45deg);
           position: absolute;
           right: 0;
           top: 0;
+        }
+      }
+    }
+
+    .select-kit.single-select.is-expanded .select-kit-header:not(.btn) {
+      border: 0px;
+      outline: 0px;
+      summary .select-kit-header-wrapper{
+        &::before {
+          transform: rotate(-135deg);
+          top: 4px;
         }
       }
     }
