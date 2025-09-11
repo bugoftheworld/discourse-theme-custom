@@ -349,7 +349,6 @@ ul.cards-content {
     width: 28px;
     height: 28px;
     margin: 0 auto;
-    background-repeat: no-repeat;
     &.blogLogo {
       background: url($blogLogo);
     }
@@ -361,6 +360,7 @@ ul.cards-content {
     }
     &.aiLogo{
       background: url($aiLogo);
+      background-repeat: no-repeat;
     }
   }
 }

@@ -116,6 +116,14 @@ sup {
     }
   }
 
+  .header-locale-selector-widget{
+    display: flex;
+    align-items: center;
+    summary{
+        border: 0px;
+    }
+  }
+
   #main-outlet-wrapper {
     .sidebar-wrapper {
       background-color: #ffffff;
