@@ -144,7 +144,8 @@ sup {
     .select-kit.single-select.is-expanded .select-kit-header:not(.btn) {
       border: 0px;
       outline: 0px;
-      summary .select-kit-header-wrapper{
+      transition: .1s;
+      .select-kit-header-wrapper{
         &::before {
           transform: rotate(-135deg);
           top: 4px;
