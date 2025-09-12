@@ -62,6 +62,7 @@ en:
       url: "https://view.publitas.com/qnap-1/2022_security_guide_en/page/1"
   news:
     title: "What’s New"
+    description : "Stay up to date with the latest QNAP announcements, product releases, and feature updates"
     learn_more: "Learn More"
   footer:
     third_party_forums: "Third Party Forums"
