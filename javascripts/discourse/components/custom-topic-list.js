@@ -39,6 +39,7 @@ export default class CustomTopicList extends Component {
                 params: {
                     order: "activity",
                     category: category_id,
+                    include_excerpt: true
                 },
             });
 
@@ -50,10 +51,6 @@ export default class CustomTopicList extends Component {
                 }
 
                 filteredTopics = filteredTopics.slice(0, listLength);
-                filteredTopics = filteredTopics.map(t => {
-                    t.excerpt = typeof t.excerpt === "string" ? t.excerpt : "";
-                    return t;
-                });
             }
 
             this.set('categoryId', categorySettings[locale] ? category_id : isProd ? 4 : 16);
