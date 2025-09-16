@@ -43,7 +43,7 @@ export default Component.extend({
 
         // console.log('lang:', lang);
         lang = qnapLangMapping(lang);
-        let apiUrl = 'https://www.qnap.com/api/v1/articles/news?locale=' + lang;
+        let apiUrl = 'https://www.qnap.com/api/v1/articles/community?locale=' + lang;
         // console.log('apiUrl:', apiUrl);
 
         ajax(apiUrl, {

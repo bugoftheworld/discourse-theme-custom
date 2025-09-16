@@ -60,7 +60,6 @@ export default class CustomTopicList extends Component {
         }
 
         this.set('filteredTopics', filteredTopics);
-        console.log("Filtered topics:", filteredTopics);
     }
 
     @action

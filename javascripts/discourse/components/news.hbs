@@ -26,19 +26,12 @@
                       />
                     </svg>
                   </div>
-                  <figcaption class="label">news</figcaption>
+                  <figcaption class="label">{{new.type}}</figcaption>
                 </figure>
                 <div class="texts">
                   <h3>{{new.title}}</h3>
                   <div>
-                    <p class="news-content">QNAP® Systems, Inc. today announced
-                      that starting October 1, 2025, all Qsirch Premium features
-                      will be unlocked and available to every Qsirch user at no
-                      additional cost. As part of this change, the current
-                      Qsirch Premium licensing program will be retired, ensuring
-                      that all QNAP NAS users can enjoy the full power of
-                      Qsirch’s advanced search capabilities without license
-                      restrictions.</p>
+                    <p class="news-content">{{new.desc}}</p>
                     <div class="news-date-link">
                       <div class="news-date">
                         <svg
@@ -56,7 +49,7 @@
                         <span>{{new.date}}</span>
                       </div>
                       <a
-                        href="https://www.qnap.com{{new.url}}"
+                        href="{{new.url}}"
                         target="_blank"
                       >{{theme-i18n "news.learn_more"}}</a>
                     </div>

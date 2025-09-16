@@ -76,7 +76,6 @@ const addServiceTicketButtonToTopic = (api) => {
                     }
 
                     window.open(serviceTicketLink, '_blank');
-                    console.log('Service ticket button clicked for topic:', topic.title);
                 });
 
                 footerButtons.appendChild(serviceButton);
