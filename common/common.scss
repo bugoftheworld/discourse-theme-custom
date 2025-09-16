@@ -175,9 +175,10 @@ sup {
     .link-bottom-line{
         margin-top: 12px;
         .discourse-tags .discourse-tag{
+            padding: 0;
             background-color: transparent;
             text-decoration: underline;
-            color: #6E6E6E;
+            color: #6E6E6E !important
         }
     }
     .topic-excerpt{
