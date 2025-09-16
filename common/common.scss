@@ -180,6 +180,9 @@ sup {
             text-decoration: underline;
             color: #6E6E6E !important
         }
+        .discourse-tags__tag-separator{
+            display: inherit;
+        }
     }
     .topic-excerpt{
         font-size: 1rem;
