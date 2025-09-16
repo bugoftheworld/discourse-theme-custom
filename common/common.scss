@@ -168,6 +168,18 @@ sup {
 
   .topic-list .topic-list-item .topic-list-data {
     padding: 12px;
+    .link-top-line{
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .link-bottom-line{
+        margin-top: 12px;
+    }
+    .topic-excerpt{
+        font-size: 1rem;
+        margin-top: 12px;
+        color:#2F2F2F;
+    }
   }
 
   .full-width .contents .topic-list .topic-list-body .topic-list-item.visited {
