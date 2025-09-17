@@ -332,27 +332,6 @@ ul.cards-content {
       height: auto;
     }
 
-    @media screen and (max-width: 1000px) {
-      width: 48%;
-      margin-bottom: 1rem;
-      margin-right: 0;
-      &:nth-child(odd) {
-        margin-right: 0.5rem;
-      }
-      > div > div {
-        padding: 10px 8px 10px 8px;
-        border-radius: 1rem;
-      }
-      a {
-        align-items: start;
-      }
-      h3 {
-        text-align: start;
-        font-size: 14px;
-        line-height: 1;
-      }
-    }
-
     a {
       color: #3c4043;
       display: flex;
@@ -389,6 +368,27 @@ ul.cards-content {
       &.aiLogo {
         background: url($aiLogo);
         background-repeat: no-repeat;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 48%;
+      margin-bottom: 1rem;
+      margin-right: 0;
+      &:nth-child(odd) {
+        margin-right: 0.5rem;
+      }
+      > div > div {
+        padding: 10px 8px 10px 8px;
+        border-radius: 1rem;
+      }
+      a {
+        align-items: start;
+      }
+      h3 {
+        text-align: start;
+        font-size: 14px;
+        line-height: 1;
       }
     }
   }
