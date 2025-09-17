@@ -50,23 +50,18 @@ export default Component.extend({
             let news = data.data;
             news.sort((a, b) => new Date(b.date) - new Date(a.date));
             news.splice(6);
-            // 轉換每一則 news 的 desc 或 content
             news.forEach(n => {
-                if (n.desc) n.desc = this.escapeHtml(n.desc);
-                if (n.content) n.content = this.escapeHtml(n.content);
+                if (n.desc) n.desc = this.decodeEntitiesAndStrip(n.desc);
             });
             this.set('news', news);
         }).catch((error) => {
             console.error('Error fetching:', error);
         });
     },
-    escapeHtml(str) {
+    decodeEntitiesAndStrip(str) {
         if (!str) return "";
-        return str
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#39;");
+        const div = document.createElement('div');
+        div.innerHTML = str;
+        return div.textContent || div.innerText || "";
     }
 });
