@@ -264,13 +264,15 @@ ul.status-content {
   flex-wrap: wrap;
   li {
     margin-bottom: .5rem;
+    @media screen and (max-width: 600px) {
+      align-items: center;
+    }
     @media screen and (min-width: 1000px) {
       margin-bottom: 0;
     }
     padding: 0 2rem;
     text-align: center;
     display: flex;
-    align-items: center;
     svg {
       margin-right: 0.5rem;
     }
