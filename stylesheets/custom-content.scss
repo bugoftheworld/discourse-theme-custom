@@ -329,20 +329,18 @@ ul.cards-content {
     }
 
     @media screen and (max-width: 1000px) {
-      li {
-        width: 50%;
-        margin-bottom: 1rem;
-        margin-right: 0;
-        &:nth-child(odd) {
-          margin-right: 0.5rem;
-        }
-        a {
-          align-items: start;
-        }
-        h3 {
-          text-align: start;
-          font-size: 14px;
-        }
+      width: 50%;
+      margin-bottom: 1rem;
+      margin-right: 0;
+      &:nth-child(odd) {
+        margin-right: 0.5rem;
+      }
+      a {
+        align-items: start;
+      }
+      h3 {
+        text-align: start;
+        font-size: 14px;
       }
     }
 
