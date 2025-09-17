@@ -41,10 +41,8 @@ export default Component.extend({
             lang = lang.replace('_', '-');
         }
 
-        // console.log('lang:', lang);
         lang = qnapLangMapping(lang);
         let apiUrl = 'https://www.qnap.com/api/v1/articles/community?locale=' + lang;
-        // console.log('apiUrl:', apiUrl);
 
         ajax(apiUrl, {
             method: 'GET'
@@ -52,9 +50,23 @@ export default Component.extend({
             let news = data.data;
             news.sort((a, b) => new Date(b.date) - new Date(a.date));
             news.splice(6);
+            // 轉換每一則 news 的 desc 或 content
+            news.forEach(n => {
+                if (n.desc) n.desc = this.escapeHtml(n.desc);
+                if (n.content) n.content = this.escapeHtml(n.content);
+            });
             this.set('news', news);
         }).catch((error) => {
             console.error('Error fetching:', error);
         });
+    },
+    escapeHtml(str) {
+        if (!str) return "";
+        return str
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;");
     }
 });
