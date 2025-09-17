@@ -19,7 +19,7 @@
         }
         @media (max-width: 600px) {
           li:nth-child(n + 6) {
-            display: block;
+            display: flex;
           }
         }
       }
