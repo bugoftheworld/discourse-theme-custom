@@ -400,7 +400,7 @@ sup {
         align-items: center;
         width: fit-content;
         .search-menu-container {
-          @media screen and (min-width: 1000px) {{
+          @media screen and (min-width: 1000px) {
             min-width: 390px;
           }
           width: inherit;
@@ -420,7 +420,7 @@ sup {
   .custom-search-banner-wrap,
   body.has-sidebar-page .custom-search-banner-wrap.wrap {
     padding: 2rem 20px 0 20px;
-    @media screen and (min-width: 1000px) {{
+    @media screen and (min-width: 1000px) {
       padding: 2rem 80px 0 80px;
     }
   }
