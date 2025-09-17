@@ -261,7 +261,12 @@ ul.status-content {
   visibility: visible;
   height: auto;
   color: #000;
+  flex-wrap: wrap;
   li {
+    margin-bottom: .5rem;
+    @media screen and (min-width: 1000px) {{
+      margin-bottom: 0;
+    }
     padding: 0 2rem;
     text-align: center;
     display: flex;
