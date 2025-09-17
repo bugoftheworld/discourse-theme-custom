@@ -326,133 +326,133 @@ ul.cards-content {
       border-radius: 50px;
       border: 1px solid rgba(0, 0, 0, 0.1);
       height: auto;
+    }
 
-  }
-
-  @media screen and (max-width: 1000px) {
-    li {
-      width: 50%;
-      margin-bottom: 1rem;
-      margin-right: 0;
-      &:nth-child(odd) {
-        margin-right: 0.5rem;
-      }
-      a{
-        align-items: start;
-      }
-      h3{
-        text-align: start;
-        font-size: 14px;
-      }
-    }
-  }
-
-  a {
-    color: #3c4043;
-    display: flex;
-    align-items: center;
-    &:hover {
-      color: $custom-primary;
-      p {
-        color: $custom-primary;
-      }
-    }
-  }
-  h3 {
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
-
-  figure {
-    margin: 0 12px 0 0;
-  }
-
-  .icon {
-    width: 28px;
-    height: 28px;
-    margin: 0 auto;
-    &.blogLogo {
-      background: url($blogLogo);
-    }
-    &.knowledgeLogo {
-      background: url($knowledgeLogo);
-    }
-    &.releaseLogo {
-      background: url($releaseLogo);
-    }
-    &.aiLogo {
-      background: url($aiLogo);
-      background-repeat: no-repeat;
-    }
-  }
-}
-ul#category-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  li {
     @media screen and (max-width: 1000px) {
-      width: 100%;
-      margin-bottom: 1rem;
+      li {
+        width: 50%;
+        margin-bottom: 1rem;
+        margin-right: 0;
+        &:nth-child(odd) {
+          margin-right: 0.5rem;
+        }
+        a {
+          align-items: start;
+        }
+        h3 {
+          text-align: start;
+          font-size: 14px;
+        }
+      }
     }
-    width: 49%;
-    figure {
-      margin: 0;
-    }
-    > div > div {
-      height: calc(100% - 3rem);
-      text-align: left;
-    }
+
     a {
-      display: flex;
       color: #3c4043;
+      display: flex;
+      align-items: center;
       &:hover {
         color: $custom-primary;
         p {
           color: $custom-primary;
         }
       }
-      div {
-        padding: 1rem;
+    }
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    figure {
+      margin: 0 12px 0 0;
+    }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+      margin: 0 auto;
+      &.blogLogo {
+        background: url($blogLogo);
       }
-      p {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        max-height: 4.5rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: normal;
-        color: $desc;
+      &.knowledgeLogo {
+        background: url($knowledgeLogo);
+      }
+      &.releaseLogo {
+        background: url($releaseLogo);
+      }
+      &.aiLogo {
+        background: url($aiLogo);
+        background-repeat: no-repeat;
       }
     }
   }
-}
-
-// Service Ticket Button Styles for topic footer
-html:not(.anon) #topic-footer-buttons .topic-footer-main-buttons {
-  flex-wrap: wrap;
-  justify-content: inherit;
-}
-#topic-footer-buttons .topic-footer-main-buttons {
-  flex-wrap: wrap;
-}
-.topic-footer-main-buttons .service-ticket-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-
-  svg {
-    width: 14px;
-    height: 14px;
-    fill: currentColor;
+  ul#category-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    li {
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      width: 49%;
+      figure {
+        margin: 0;
+      }
+      > div > div {
+        height: calc(100% - 3rem);
+        text-align: left;
+      }
+      a {
+        display: flex;
+        color: #3c4043;
+        &:hover {
+          color: $custom-primary;
+          p {
+            color: $custom-primary;
+          }
+        }
+        div {
+          padding: 1rem;
+        }
+        p {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          max-height: 4.5rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          color: $desc;
+        }
+      }
+    }
   }
 
-  // Ensure button is properly sized on mobile when text is hidden
-  @media screen and (max-width: 768px) {
-    min-width: auto;
-    padding: 8px 12px;
+  // Service Ticket Button Styles for topic footer
+  html:not(.anon) #topic-footer-buttons .topic-footer-main-buttons {
+    flex-wrap: wrap;
+    justify-content: inherit;
+  }
+  #topic-footer-buttons .topic-footer-main-buttons {
+    flex-wrap: wrap;
+  }
+  .topic-footer-main-buttons .service-ticket-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    // Ensure button is properly sized on mobile when text is hidden
+    @media screen and (max-width: 768px) {
+      min-width: auto;
+      padding: 8px 12px;
+    }
   }
 }
