@@ -263,8 +263,8 @@ ul.status-content {
   color: #000;
   flex-wrap: wrap;
   li {
-    margin-bottom: .5rem;
-    @media screen and (max-width: 600px) {
+    margin-bottom: 0.5rem;
+    @media screen and (min-width: 600px) {
       align-items: center;
     }
     @media screen and (min-width: 1000px) {
@@ -326,12 +326,27 @@ ul.cards-content {
       border-radius: 50px;
       border: 1px solid rgba(0, 0, 0, 0.1);
       height: auto;
-    }
-    @media screen and (max-width: 1000px) {
-      width: 100%;
+
+  }
+
+  @media screen and (max-width: 1000px) {
+    li {
+      width: 50%;
       margin-bottom: 1rem;
+      margin-right: 0;
+      &:nth-child(odd) {
+        margin-right: 0.5rem;
+      }
+      a{
+        align-items: start;
+      }
+      h3{
+        text-align: start;
+        font-size: 14px;
+      }
     }
   }
+
   a {
     color: #3c4043;
     display: flex;
@@ -365,7 +380,7 @@ ul.cards-content {
     &.releaseLogo {
       background: url($releaseLogo);
     }
-    &.aiLogo{
+    &.aiLogo {
       background: url($aiLogo);
       background-repeat: no-repeat;
     }

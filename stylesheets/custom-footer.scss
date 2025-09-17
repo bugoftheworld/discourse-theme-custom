@@ -1,5 +1,11 @@
 .discourse-theme--q .custom-footer {
   background-color: #101828;
+  @media screen and (max-width: 1110px) {
+    .list{
+        margin-right: 1rem;
+        margin-top: 0;
+    }
+  }
   .first-box {
     width: 20%;
   }
