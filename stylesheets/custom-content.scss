@@ -328,7 +328,7 @@ ul.cards-content {
       height: auto;
     }
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (max-width: 1000px) {
       width: 48%;
       margin-bottom: 1rem;
       margin-right: 0;
