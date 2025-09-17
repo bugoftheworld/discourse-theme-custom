@@ -29,6 +29,12 @@ body {
       margin-bottom: 1em;
     }
   }
+
+  &.navigation-categories.categories-list {
+    .categories-list .category .category-logo.aspect-image {
+        display: none;
+    }
+  }
 }
 $custom-primary: #1b72e7;
 $search-primary: #3c4043;
