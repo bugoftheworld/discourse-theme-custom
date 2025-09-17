@@ -73,6 +73,9 @@ div.before-header-panel-outlet {
   .welcome-banner {
     @media (max-width: 39.999rem) {
       display: inherit;
+      &.--location-above-topic-content {
+        display: none;
+      }
     }
   }
 
