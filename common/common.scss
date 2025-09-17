@@ -70,6 +70,12 @@ div.before-header-panel-outlet {
     display: none;
   }
 
+  .welcome-banner {
+    @media (max-width: 39.999rem) {
+      display: inherit;
+    }
+  }
+
   #main-outlet {
     margin-top: 0px;
     background: inherit;
