@@ -252,6 +252,10 @@ html body .isHomepage #main-outlet {
   }
 }
 ul.status-content {
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 0;
+  }
+
   display: flex;
   justify-content: center;
   list-style: none;
@@ -336,8 +340,7 @@ ul.cards-content {
         margin-right: 0.5rem;
       }
       > div > div {
-        border:0px;
-        padding: 10px 8px 10px 0px;
+        padding: 10px 8px 10px 8px;
         border-radius: 1rem;
       }
       a {
