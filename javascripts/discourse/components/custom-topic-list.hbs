@@ -3,7 +3,7 @@
     <div class="featured-lists__list-container">
       <div class="featured-lists__list-header">
         <h2>{{theme-i18n "features_list.latest.status"}}</h2>
-        <a href="/latest" target="_blank" class="feed-link">{{theme-i18n
+        <a href="/categories"  class="feed-link">{{theme-i18n
             "features_list.latest.all"
           }}</a>
         <DButton id="create-topic" class='btn btn-default' {{on "click" (if this.currentUser this.createTopic this.showLogin)}}>
@@ -17,7 +17,7 @@
         class="featured-lists__list-body"
       />
       <div>
-        <a href="/latest" target="_blank" class="feed-link">{{theme-i18n
+        <a href="/categories" class="feed-link">{{theme-i18n
             "features_list.latest.all"
           }}</a>
       </div>
