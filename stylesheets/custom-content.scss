@@ -328,12 +328,17 @@ ul.cards-content {
       height: auto;
     }
 
-    @media screen and (max-width: 1000px) {
-      width: 50%;
+    @media screen and (min-width: 1000px) {
+      width: 48%;
       margin-bottom: 1rem;
       margin-right: 0;
       &:nth-child(odd) {
         margin-right: 0.5rem;
+      }
+      > div > div {
+        border:0px;
+        padding: 10px 8px 10px 0px;
+        border-radius: 1rem;
       }
       a {
         align-items: start;
@@ -341,6 +346,7 @@ ul.cards-content {
       h3 {
         text-align: start;
         font-size: 14px;
+        line-height: 1;
       }
     }
 
