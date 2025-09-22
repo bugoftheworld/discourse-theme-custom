@@ -369,12 +369,6 @@ sup {
     display: none;
   }
 
-  .header-locale-selector {
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  }
-
   //animation fadeInDown
   @keyframes fadeInDown {
     0% {

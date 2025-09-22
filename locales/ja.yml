@@ -35,6 +35,7 @@ ja:
   features_list:
     latest:
       status: "最新"
+      description : "最新の QNAP に関する発表、製品リリース、機能アップデートの最新情報を常にチェックしましょう。"
       all: "すべてのトピック"
       new: '<svg class="fa d-icon d-icon-plus svg-icon svg-string" xmlns="http://www.w3.org/2000/svg"><use href="#plus"></use></svg> <span class="d-button-label">新しいトピック</span>'
   discussion_spaces:
