@@ -6,8 +6,8 @@ de:
     sign_in: "Anmelden"
     register: "Registrieren"
   status:
-    online_users: "Online-Benutzer"
-    posts: "Beiträge"
+    online_users: "Benutzer online, die sich gegenseitig helfen"
+    posts: "Erfahrungsberichte"
   cards:
     item1:
       url: "https://blog.qnap.com/"

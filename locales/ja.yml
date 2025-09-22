@@ -6,8 +6,8 @@ ja:
     sign_in: "サインイン"
     register: "登録"
   status:
-    online_users: "オンラインユーザー"
-    posts: "投稿"
+    online_users: "オンラインでお互いに助け合うユーザー"
+    posts: "体験の共有"
   cards:
     item1:
       url: "https://blog.qnap.com"

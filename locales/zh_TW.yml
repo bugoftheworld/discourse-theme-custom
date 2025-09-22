@@ -6,8 +6,8 @@ zh_TW:
     sign_in: "登入"
     register: "註冊"
   status:
-    online_users: "在線用戶"
-    posts: "貼文"
+    online_users: "成員在線互助中"
+    posts: "經驗分享"
   cards:
     item1:
       url: "https://blog.qnap.com/"
