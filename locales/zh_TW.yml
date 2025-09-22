@@ -24,6 +24,11 @@ zh_TW:
       title: "版本說明"
       description: "了解我們最新版本中的最新功能、改進和錯誤修復。"
       icon: "releaseLogo"
+    item4:
+      url: "/c/en/ai/84"
+      title: "AI 討論"
+      description: ""
+      icon: "aiLogo"
   category:
     ai:
       name: "人工智慧"

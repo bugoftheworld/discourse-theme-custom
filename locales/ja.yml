@@ -24,6 +24,11 @@ ja:
       title: "リリースノート"
       description: "最新のリリースでの新機能、改善点、バグ修正を発見しましょう。"
       icon: "releaseLogo"
+    item4:
+      url: "/c/en/ai/84"
+      title: "AIディスカッション"
+      description: ""
+      icon: "aiLogo"
   category:
     ai:
       name: "人工知能"
@@ -58,6 +63,7 @@ ja:
       url: "https://view.publitas.com/qnap-1/2022_security_guide_en/page/1"
   news:
     title: "新着情報"
+    description: "最新の QNAP に関する発表、製品リリース、機能アップデートの最新情報を常にチェックしましょう。"
     learn_more: "もっと詳しく"
   footer:
     third_party_forums: "サードパーティフォーラム"
