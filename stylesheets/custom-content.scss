@@ -14,9 +14,11 @@ body.has-sidebar-page div.wrap,
 .d-header > .wrap,
 .wrap {
   max-width: inherit;
-  padding: 0 6%;
+  padding-left: 6%;
+  padding-right: 6%;
   @media screen and (min-width: 1920px) {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 1640px !important;
   }
 }
