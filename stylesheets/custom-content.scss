@@ -25,8 +25,8 @@ body.has-sidebar-page div.wrap,
 
 body.has-sidebar-page{
     .q-container.news-section-block:before {
-        width: calc(114% + 230px + 2rem);
-        left: calc(-7.25% - 230px - 1rem);
+        width: calc(114% + 230px + 3rem);
+        left: calc(-7.25% - 230px - 2rem);
         @media screen and (min-width: 1920px) {
             width: 100vw;
             left: calc(-1*(100vw - 1640px)/2 - 230px - 5rem);
@@ -253,7 +253,7 @@ html body .isHomepage #main-outlet {
       z-index: 0;
       height: 110%;
       width: calc(114% + 230px + 2rem);
-      left: calc(-7.25% - 230px - 2rem);
+        left: calc(-7.25% - 230px - 2rem);
       @media screen and (min-width: 1920px) {
         width: 100vw;
         left: calc(-1*(100vw - 1640px)/2 - .25rem);
