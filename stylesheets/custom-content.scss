@@ -29,7 +29,7 @@ body.has-sidebar-page{
         left: calc(-7.25% - 230px - 1rem);
         @media screen and (min-width: 1920px) {
             width: 100vw;
-            left: calc(-1 * ((100vw - 1640px) / 2));
+            left: calc(-1*(100vw - 1640px)/2 - 230px - 5rem);
         }
     }
 }
@@ -256,7 +256,7 @@ html body .isHomepage #main-outlet {
       left: calc(-7.25% - 230px - 2rem);
       @media screen and (min-width: 1920px) {
         width: 100vw;
-        left: calc(-1 * (100vw - 1640px) / 2 - 230px - 5rem);
+        left: calc(-1*(100vw - 1640px)/2 - .25rem);
       }
     }
     > div {
