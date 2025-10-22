@@ -25,7 +25,12 @@ body.has-sidebar-page div.wrap,
 
 body.has-sidebar-page{
     .q-container.news-section-block:before {
-      width: 208.2%;
+        width: 100vw;
+        left: -21.75vw;
+        @media screen and (min-width: 1920px) {
+            width: 100vw;
+            left: calc(-1 * ((100vw - 1640px) / 2) - 312px);
+        }
     }
 }
 #main-outlet-wrapper {
@@ -246,9 +251,13 @@ html body .isHomepage #main-outlet {
       top: 0;
       background: linear-gradient(180deg, #f9fafb 0%, #eff6ff 100%);
       z-index: 0;
-      width: 206.8%;
-      left: -100%;
+      width: 100vw;
+      left: -7%;
       height: 110%;
+     @media screen and (min-width: 1920px) {
+        width: calc(100% + 100vw - 1640px);
+        left: calc((1640px - 100vw) / 2);
+     }
     }
     > div {
       position: relative;
