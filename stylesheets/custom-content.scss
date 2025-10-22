@@ -25,12 +25,12 @@ body.has-sidebar-page div.wrap,
 
 body.has-sidebar-page{
     .q-container.news-section-block:before {
-        // width: 100vw;
-        // left: -16px;
-        // @media screen and (min-width: 1920px) {
-        //     width: 100vw;
-        //     left: calc(-1 * ((100vw - 1640px) / 2) - 312px);
-        // }
+        width: calc(114% + 230px + 2rem);
+        left: calc(-7.25% - 230px - 1rem);
+        @media screen and (min-width: 1920px) {
+            width: 100vw;
+            left: calc(-1 * ((100vw - 1640px) / 2));
+        }
     }
 }
 #main-outlet-wrapper {
@@ -251,13 +251,13 @@ html body .isHomepage #main-outlet {
       top: 0;
       background: linear-gradient(180deg, #f9fafb 0%, #eff6ff 100%);
       z-index: 0;
-    //   width: 100vw;
-    //   left: -7%;
       height: 110%;
-     @media screen and (min-width: 1920px) {
-        // width: calc(100% + 100vw - 1640px);
-        // left: calc((1640px - 100vw) / 2);
-     }
+      width: calc(114% + 230px + 2rem);
+      left: calc(-7.25% - 230px - 2rem);
+      @media screen and (min-width: 1920px) {
+        width: 100vw;
+        left: calc(-1 * (100vw - 1640px) / 2 - 230px - 5rem);
+      }
     }
     > div {
       position: relative;
