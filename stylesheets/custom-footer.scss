@@ -1,4 +1,11 @@
-.custom-footer {
+.discourse-theme--q .custom-footer {
+  background-color: #101828;
+  @media screen and (max-width: 1110px) {
+    .list{
+        margin-right: 1rem;
+        margin-top: 0;
+    }
+  }
   .first-box {
     width: 20%;
   }
@@ -6,72 +13,31 @@
   .second-box {
     .links {
       justify-content: flex-start;
+      .list:nth-child(2) {
+        li:nth-child(n + 6) {
+          display: none;
+        }
+        @media (max-width: 600px) {
+          li:nth-child(n + 6) {
+            display: flex;
+          }
+        }
+      }
 
-      ul {
-        display: flex;
-        flex-wrap: wrap;
+      .list:nth-child(3) {
+        @media (max-width: 600px) {
+          display: none;
+        }
+        > span {
+          opacity: 0;
+          font-size: 14px;
+        }
       }
 
       li {
         margin: 0.5em 0.5em 0.5em 0;
         display: flex;
         align-items: center;
-        &:not(:last-child) {
-          &::after {
-            content: "|";
-            margin-left: 0.5em;
-            margin-right: .5em;
-            color: silver;
-          }
-        }
-        &::before {
-          content: "";
-          width: 24px;
-          height: 24px;
-          display: inline-block;
-          margin-right: 8px;
-          background-size: contain;
-        }
-        &:nth-child(1) {
-          &::before {
-            background-image: url($czLogo);
-          }
-        }
-        &:nth-child(2) {
-          &::before {
-            background-image: url($nlLogo);
-          }
-        }
-        &:nth-child(3) {
-          &::before {
-            background-image: url($deLogo);
-          }
-        }
-        &:nth-child(4) {
-          &::before {
-            background-image: url($itLogo);
-          }
-        }
-        &:nth-child(5) {
-          &::before {
-            background-image: url($krLogo);
-          }
-        }
-        &:nth-child(6) {
-          &::before {
-            background-image: url($plLogo);
-          }
-        }
-        &:nth-child(7) {
-          &::before {
-            background-image: url($esLogo);
-          }
-        }
-        &:nth-child(8) {
-          &::before {
-            background-image: url($seLogo);
-          }
-        }
       }
     }
   }
@@ -79,6 +45,8 @@
   ul li.footer-section-link-wrapper {
     a {
       color: silver;
+      font-size: 12px;
+      line-height: 16px;
 
       &:hover {
         color: #9ff;

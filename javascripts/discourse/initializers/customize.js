@@ -67,11 +67,11 @@ export default {
                 });
 
                 // Start observing attribute changes on the button
-                observer.observe(button, {attributes: true});
+                observer.observe(button, { attributes: true });
             };
 
             const updateLangs = (langs = []) => {
-                langs.forEach(({wrap, selector, order, content}) => {
+                langs.forEach(({ wrap, selector, order, content }) => {
                     if (order === 'all') {
                         const elements = document.querySelectorAll(wrap);
                         for (let i = 0; i < elements.length; i++) {
@@ -149,6 +149,7 @@ export default {
                 }
 
                 main.classList.add("discourse-theme--q");
+
                 if (isHomepage) {
                     applicationController.set("showSidebar", false);
                     main.classList.add("isHomepage");
@@ -164,9 +165,9 @@ export default {
                             for (let i = 0; i < featureListWrapper.length; i++) {
                                 featureListWrapper[i].classList.add("full-width");
                             }
-                            for (let i = 0; i < featureListContainer.length; i++) {
-                                featureListContainer[i].classList.add("contents");
-                            }
+                            // for (let i = 0; i < featureListContainer.length; i++) {
+                            //     featureListContainer[i].classList.add("contents");
+                            // }
                         }
                         updateLangs([
                             {
@@ -183,7 +184,7 @@ export default {
                             },
                             {
                                 wrap: ".custom-search-banner-wrap",
-                                selector: "h1",
+                                selector: ".custom-search-banner-headline",
                                 order: 0,
                                 content: I18n.t(themePrefix("search_banner.headline"))
                             },

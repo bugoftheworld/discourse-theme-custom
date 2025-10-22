@@ -6,8 +6,8 @@ ja:
     sign_in: "サインイン"
     register: "登録"
   status:
-    online_users: "オンラインユーザー"
-    posts: "投稿"
+    online_users: "オンラインでお互いに助け合うユーザー"
+    posts: "体験の共有"
   cards:
     item1:
       url: "https://blog.qnap.com"
@@ -24,6 +24,11 @@ ja:
       title: "リリースノート"
       description: "最新のリリースでの新機能、改善点、バグ修正を発見しましょう。"
       icon: "releaseLogo"
+    item4:
+      url: "/c/en/ai/84"
+      title: "AIディスカッション"
+      description: ""
+      icon: "aiLogo"
   category:
     ai:
       name: "人工知能"
@@ -35,6 +40,7 @@ ja:
   features_list:
     latest:
       status: "最新"
+      description : "最新の QNAP に関する発表、製品リリース、機能アップデートの最新情報を常にチェックしましょう。"
       all: "すべてのトピック"
       new: '<svg class="fa d-icon d-icon-plus svg-icon svg-string" xmlns="http://www.w3.org/2000/svg"><use href="#plus"></use></svg> <span class="d-button-label">新しいトピック</span>'
   discussion_spaces:
@@ -57,6 +63,7 @@ ja:
       url: "https://view.publitas.com/qnap-1/2022_security_guide_en/page/1"
   news:
     title: "新着情報"
+    description: "最新の QNAP に関する発表、製品リリース、機能アップデートの最新情報を常にチェックしましょう。"
     learn_more: "もっと詳しく"
   footer:
     third_party_forums: "サードパーティフォーラム"

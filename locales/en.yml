@@ -6,8 +6,8 @@ en:
     sign_in: "Sign In"
     register: "Register"
   status:
-    online_users: "online users"
-    posts: "posts"
+    online_users: "User Online Helping Each Other"
+    posts: "Experience Shares"
   cards:
     item1:
       url: "https://blog.qnap.com"
@@ -24,6 +24,11 @@ en:
       title: "Release Notes"
       description: "Discover the latest features, improvements, and bug fixes in our most recent releases."
       icon: "releaseLogo"
+    item4:
+      url: "/c/en/ai/84"
+      title: "AI Discussion"
+      description: ""
+      icon: "aiLogo"
   category:
     ai:
       name: "Artificial Intelligence"
@@ -57,6 +62,7 @@ en:
       url: "https://view.publitas.com/qnap-1/2022_security_guide_en/page/1"
   news:
     title: "What’s New"
+    description : "Stay up to date with the latest QNAP announcements, product releases, and feature updates"
     learn_more: "Learn More"
   footer:
     third_party_forums: "Third Party Forums"

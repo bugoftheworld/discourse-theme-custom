@@ -6,8 +6,8 @@ zh_TW:
     sign_in: "登入"
     register: "註冊"
   status:
-    online_users: "在線用戶"
-    posts: "貼文"
+    online_users: "成員在線互助中"
+    posts: "經驗分享"
   cards:
     item1:
       url: "https://blog.qnap.com/"
@@ -24,6 +24,11 @@ zh_TW:
       title: "版本說明"
       description: "了解我們最新版本中的最新功能、改進和錯誤修復。"
       icon: "releaseLogo"
+    item4:
+      url: "/c/en/ai/84"
+      title: "AI 討論"
+      description: ""
+      icon: "aiLogo"
   category:
     ai:
       name: "人工智慧"
@@ -57,6 +62,7 @@ zh_TW:
       url: "https://view.publitas.com/qnap-1/2022_security_guide_en/page/1"
   news:
     title: "最新消息"
+    description: "了解 QNAP 的最新消息、更新和公告。"
     learn_more: "了解更多"
   footer:
     third_party_forums: "第三方論壇"

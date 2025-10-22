@@ -39,6 +39,7 @@ export default class CustomTopicList extends Component {
                 params: {
                     order: "activity",
                     category: category_id,
+                    include_excerpt: true
                 },
             });
 

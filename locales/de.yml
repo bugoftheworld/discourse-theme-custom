@@ -6,8 +6,8 @@ de:
     sign_in: "Anmelden"
     register: "Registrieren"
   status:
-    online_users: "Online-Benutzer"
-    posts: "Beiträge"
+    online_users: "Benutzer online, die sich gegenseitig helfen"
+    posts: "Erfahrungsberichte"
   cards:
     item1:
       url: "https://blog.qnap.com/"
@@ -81,6 +81,7 @@ de:
       url: "https://view.publitas.com/qnap-1/2022_security_guide_en/page/1"
   news:
     title: "Neuigkeiten"
+    description: "Bleiben Sie über die neuesten QNAP‑Ankündigungen, Produktveröffentlichungen und Funktions‑Updates stets auf dem Laufenden."
     learn_more: "Erfahren Sie mehr"
   footer:
     third_party_forums: "Foren von Drittanbietern"

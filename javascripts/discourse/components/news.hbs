@@ -1,20 +1,72 @@
-<div class="q-container">
+<div class="q-container news-section-block">
   <div>
     <h2>{{theme-i18n "news.title"}}</h2>
-    <ul class="news-content card-type">
+    <p>{{theme-i18n "news.description"}}</p>
+    <ul class="card-type news-card">
       {{#each this.news as |new|}}
         <li>
           <div>
             <div class="new">
               <div>
                 <figure>
-                  <img src="{{new.image_url}}" alt="{{new.title}}" />
+                  <div class="news-icon-bg">
+                    {{#if (eq new.type "news")}}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="#155DFC"
+                        class="bi bi-lightning-charge-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"
+                        />
+                      </svg>
+                    {{/if}}
+                    {{#if (eq new.type "blog")}}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="#155DFC"
+                        class="bi bi-book-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"
+                        />
+                      </svg>
+                    {{/if}}
+                  </div>
+                  <figcaption class="label">{{new.type}}</figcaption>
                 </figure>
                 <div class="texts">
-                  <h3>{{new.title}}</h3>
+                  <div>
+                    <h3>{{new.title}}</h3>
+                    <p class="news-content">{{new.desc}}</p>
+                  </div>
+                  <div class="news-date-link">
+                    <div class="news-date">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-calendar"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+                        />
+                      </svg>
+                      <span>{{new.date}}</span>
+                    </div>
+                    <a href="{{new.url}}" target="_blank">
+                      {{theme-i18n "news.learn_more"}}</a>
+                  </div>
                 </div>
               </div>
-              <a href="https://www.qnap.com{{new.url}}" target="_blank">{{theme-i18n "news.learn_more"}} ⟩</a>
             </div>
           </div>
         </li>
