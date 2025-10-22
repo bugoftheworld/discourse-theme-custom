@@ -125,8 +125,6 @@ sup {
 }
 
 .discourse-theme--q {
-  overflow: hidden;
-
   &:not(.isHomepage) {
     .topic-list .topic-list-item .topic-list-data.num {
       display: none;
