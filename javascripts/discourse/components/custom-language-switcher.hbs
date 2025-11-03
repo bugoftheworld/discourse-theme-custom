@@ -11,7 +11,7 @@
         <ul class="language-list">
           {{#each this.availableLocales as |locale|}}
             <li class="language-item {{if (eq locale.code this.currentLocale) 'selected'}}">
-              <div
+              <DButton
                 @action={{fn this.changeLocale locale.code}}
                 class="language-option {{if (eq locale.code this.currentLocale) 'active'}}"
               >
@@ -19,19 +19,19 @@
                 {{#if (eq locale.code this.currentLocale)}}
                   <span class="check-icon"></span>
                 {{/if}}
-              </div>
+              </DButton>
             </li>
           {{/each}}
 
           {{! 自定義按鈕直接在語言列表中 }}
           {{#each this.fixedButtons as |button|}}
             <li class="language-item fixed-button-item">
-              <div
+              <DButton
                 @action={{fn this.navigateToUrl button.url}}
                 class="language-option fixed-button-option"
               >
                 <span class="language-name">{{button.name}}</span>
-              </div>
+              </DButton>
             </li>
           {{/each}}
         </ul>
