@@ -38,18 +38,29 @@ export default class CustomLanguageSwitcher extends Component {
     return this.languageNames[this.currentLocale] || this.currentLocale;
   }
 
+  // 🔄 轉址邏輯（統一處理）
+  redirectToLocale(localeCode) {
+    const domain = window.location.origin;
+
+    if (domain === "https://community.qnap.com") {
+      window.location.href = domain + '/c/' + localeCode.replace('_', '').toLowerCase();
+    } else {
+      window.location.href = domain;
+    }
+  }
+
   @action
   changeLocale(localeCode) {
     if (this.currentUser) {
       // 登入用戶：更新用戶設定
       this.currentUser.set('locale', localeCode);
       this.currentUser.save(['locale']).then(() => {
-        window.location.reload();
+        this.redirectToLocale(localeCode);
       });
     } else {
-      // 訪客：設定 cookie 並重新載入
+      // 訪客：設定 cookie 並轉址
       document.cookie = `locale=${localeCode};path=/;max-age=31536000`;
-      window.location.reload();
+      this.redirectToLocale(localeCode);
     }
   }
 
