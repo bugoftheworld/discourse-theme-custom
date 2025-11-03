@@ -1,0 +1,148 @@
+// 自定義語言切換器樣式 - 下拉 Select 風格
+.custom-language-switcher-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.custom-language-switcher {
+  position: relative;
+
+  // 主按鈕樣式 - 看起來像 select
+  .language-switcher-dropdown {
+    min-width: 150px;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.5em 1em;
+      background: var(--secondary);
+      border: 1px solid var(--primary-low-mid);
+      border-radius: 4px;
+      font-size: 0.9em;
+      transition: all 0.2s ease;
+
+      .d-icon {
+        color: var(--primary-medium);
+      }
+
+      &:hover {
+        background: var(--primary-very-low);
+        border-color: var(--primary-medium);
+      }
+
+      &:focus {
+        border-color: var(--tertiary);
+        box-shadow: 0 0 0 2px rgba(var(--tertiary-rgb), 0.2);
+      }
+    }
+  }
+
+  // 下拉選單內容
+  .language-switcher-content {
+    min-width: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: var(--secondary);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  // 選單標題
+  .language-switcher-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.75em 1em;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary-low);
+    background: var(--primary-very-low);
+    border-radius: 6px 6px 0 0;
+
+    .d-icon {
+      color: var(--tertiary);
+    }
+  }
+
+  // 語言列表
+  .language-list {
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 0;
+
+    .language-item {
+      margin: 0;
+
+      &.selected {
+        background: var(--tertiary-very-low);
+      }
+
+      .language-option {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75em 1em;
+        background: transparent;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        transition: all 0.15s ease;
+        border-radius: 0;
+
+        .language-name {
+          flex: 1;
+          font-size: 0.95em;
+          color: var(--primary);
+        }
+
+        .check-icon,
+        .button-icon {
+          color: var(--tertiary);
+          font-weight: bold;
+          margin-left: 1em;
+
+          .d-icon {
+            width: 1em;
+            height: 1em;
+          }
+        }
+
+        &:hover {
+          background: var(--primary-low);
+        }
+
+        &.active {
+          background: var(--tertiary-low);
+          font-weight: 500;
+
+          .language-name {
+            color: var(--tertiary);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 移動端樣式調整
+@media screen and (max-width: 768px) {
+  .custom-language-switcher {
+    .language-switcher-dropdown .btn {
+      min-width: 120px;
+      padding: 0.4em 0.8em;
+      font-size: 0.85em;
+    }
+
+    .language-switcher-content {
+      min-width: 180px;
+    }
+  }
+}
+
+// 隱藏原生的 language-switcher（避免重複）
+button[data-identifier='language-switcher'] {
+  display: none !important;
+}
