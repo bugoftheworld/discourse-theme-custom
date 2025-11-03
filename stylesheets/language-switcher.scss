@@ -20,6 +20,10 @@
     background: inherit;
     &:hover{
       background: inherit;
+      color: var(--primary);
+      .btn{
+        color: var(--primary);
+      }
     }
     &.-expanded{
         &:before {
@@ -70,6 +74,9 @@
     &:hover {
       background: var(--tertiary-very-low);
       color: var(--primary);
+      .btn{
+        color: var(--primary);
+      }
     }
 
     .language-option {
