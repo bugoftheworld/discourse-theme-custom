@@ -2,6 +2,9 @@
 .custom-language-switcher-wrapper {
   display: inline-flex;
   align-items: center;
+  width: 70%;
+  display: flex;
+  justify-content: end;
 }
 
 .custom-language-switcher {
@@ -20,7 +23,7 @@
       transform: rotate(45deg);
       position: absolute;
       right: 0;
-      top: 0;
+      top: calc(50% - 8px);
     }
 
     .btn {
