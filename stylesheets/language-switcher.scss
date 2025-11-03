@@ -18,6 +18,12 @@
     min-width: 150px;
     position: relative;
     background: inherit;
+    &.-expanded{
+        &:before {
+          transform: rotate(-135deg);
+          top: calc(50% - 4px);
+        }
+    }
     &:before {
       content: "";
       width: 8px;
@@ -58,6 +64,9 @@
 
   .language-item {
     margin: 0;
+    &:hover {
+      background: var(--tertiary-very-low);
+    }
 
     .language-option {
       width: 100%;
