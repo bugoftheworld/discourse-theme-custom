@@ -4,7 +4,7 @@ import { addServiceTicketButtonToTopic } from "../utility";
 
 export default {
     name: "custom-settings",
-    initialize() {
+    initialize(container) {
         let sidebarMenuButtonObserverInitialized = false;
         withPluginApi("0.8.18", (api) => {
             const updateMultilingualCategoryInSidebar = () => {
@@ -278,7 +278,8 @@ export default {
                 }
 
                 // Fetch and update the logo URL
-                const logoUrl = Discourse.SiteSettings.logo;
+                const siteSettings = container.lookup("service:site-settings");
+                const logoUrl = siteSettings.logo;
                 const logoElement = document.getElementById('site-logo');
 
                 if (logoUrl) {
