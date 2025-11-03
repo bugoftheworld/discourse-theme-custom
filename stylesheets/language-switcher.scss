@@ -19,16 +19,7 @@
       border-radius: 4px;
       font-size: 0.9em;
       transition: all 0.2s ease;
-
-      &:hover {
-        background: var(--primary-very-low);
-        border-color: var(--primary-medium);
-      }
-
-      &:focus {
-        border-color: var(--tertiary);
-        box-shadow: 0 0 0 2px rgba(var(--tertiary-rgb), 0.2);
-      }
+      background-color: inherit;
     }
   }
 
@@ -37,27 +28,6 @@
     min-width: 200px;
     max-height: 400px;
     overflow-y: auto;
-    background: var(--secondary);
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  // 選單標題
-  .language-switcher-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    padding: 0.75em 1em;
-    font-weight: 600;
-    font-size: 0.9em;
-    color: var(--primary);
-    border-bottom: 1px solid var(--primary-low);
-    background: var(--primary-very-low);
-    border-radius: 6px 6px 0 0;
-
-    .d-icon {
-      color: var(--tertiary);
-    }
   }
 
   // 語言列表
