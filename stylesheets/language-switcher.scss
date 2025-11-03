@@ -10,6 +10,18 @@
   // 主按鈕樣式 - 看起來像 select
   .language-switcher-dropdown {
     min-width: 150px;
+    position: relative;
+    &:before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-right: 1.5px solid #646464;
+      border-bottom: 1.5px solid #646464;
+      transform: rotate(45deg);
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
 
     .btn {
       display: flex;
