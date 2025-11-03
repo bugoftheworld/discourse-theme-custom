@@ -18,6 +18,9 @@
     min-width: 150px;
     position: relative;
     background: inherit;
+    &:hover{
+      background: inherit;
+    }
     &.-expanded{
         &:before {
           transform: rotate(-135deg);
@@ -66,6 +69,7 @@
     margin: 0;
     &:hover {
       background: var(--tertiary-very-low);
+      color: var(--primary);
     }
 
     .language-option {
