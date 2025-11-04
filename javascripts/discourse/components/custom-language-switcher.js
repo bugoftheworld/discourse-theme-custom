@@ -49,7 +49,7 @@ export default class CustomLanguageSwitcher extends Component {
   // 提供給 ComboBox 的項目（包含固定按鈕）
   get localeOptions() {
     const options = this.availableLocales.map((l) => ({ id: l.code, name: l.name }));
-    const extras = this.fixedButtons.map((b) => ({ id: `link:${b.value}`, name: b.name, url: window.location.origin === 'https://community.qnap.com' ? b.url : '/c/storage/23' }));
+    const extras = this.fixedButtons.map((b) => ({ id: `link:${b.value}`, name: b.name, url: b.url }));
     return [...options, ...extras];
   }
 
@@ -96,10 +96,11 @@ export default class CustomLanguageSwitcher extends Component {
     if (!item) return;
     const id = typeof item === "string" ? item : String(item.id);
     if (id.startsWith("link:")) {
-      if (item.url) {
-        window.location.href = item.url;
-      } else {
-        window.location.href = window.location.origin;
+      // onChange 可能只傳回 id 字串，因此需要在 options 中找 url
+      const option = this.localeOptions.find((o) => String(o.id) === id);
+      const url = option && option.url;
+      if (url) {
+        window.location.href = window.location.origin + url;
       }
       return;
     }
