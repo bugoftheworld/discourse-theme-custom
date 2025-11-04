@@ -8,8 +8,8 @@ export default class CustomLanguageSwitcher extends Component {
 
   // 自定義語言名稱
   languageNames = {
-    'zh_TW': '繁體中文',
     'en': 'English',
+    'zh_TW': '繁體中文',
     'ja': '日本語',
     'de': 'Deutsch',
     'id': 'Bahasa Indonesia',
@@ -21,14 +21,29 @@ export default class CustomLanguageSwitcher extends Component {
   ];
 
   // 使用原生 ComboBox 的 filter，不需要本地 filter 狀態
+  get languageOrder() {
+    // 依照 languageNames 宣告順序做排序依據
+    return Object.keys(this.languageNames || {});
+  }
+
   get availableLocales() {
     const locales = this.siteSettings.content_localization_supported_locales;
     if (!locales) return [];
 
-    return locales.split("|").map((code) => ({
-      code,
-      name: this.languageNames[code] || code,
-    }));
+    const order = this.languageOrder;
+    const list = locales
+      .split("|")
+      .filter(Boolean)
+      .map((code, idx) => ({
+        code,
+        name: this.languageNames[code] || code,
+        _originalIndex: idx,
+        _orderIndex: order.indexOf(code) === -1 ? Number.MAX_SAFE_INTEGER : order.indexOf(code),
+      }))
+      .sort((a, b) => a._orderIndex - b._orderIndex || a._originalIndex - b._originalIndex)
+      .map(({ _originalIndex, _orderIndex, ...rest }) => rest);
+
+    return list;
   }
 
   // 提供給 ComboBox 的項目（包含固定按鈕）
