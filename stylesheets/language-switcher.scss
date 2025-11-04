@@ -8,22 +8,24 @@
 .custom-language-switcher-wrapper {
   display: inline-flex;
   align-items: center;
-  background: inherit;
 
-  .language-switcher-combobox {
-    &.is-expanded {
-        .select-kit .select-kit-header:not(.btn) .select-kit-header-wrapper &:before {
+  &.is-expanded {
+    .select-kit .select-kit-header:not(.btn) {
+      .select-kit-header-wrapper {
+        &:before {
           transform: rotate(-135deg);
           top: 4px;
         }
+      }
     }
   }
 
   .select-kit .select-kit-header:not(.btn) {
     border: 0;
-    padding-right: 1.5rem;
+    background: inherit;
     .select-kit-header-wrapper {
       position: relative;
+      padding-right: 1.5rem;
       &:before {
         content: "";
         width: 8px;
