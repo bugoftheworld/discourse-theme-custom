@@ -22,13 +22,25 @@ export default class CustomLanguageSwitcher extends Component {
 
   // 使用原生 ComboBox 的 filter，不需要本地 filter 狀態
 
+  // 將語言代碼正規化並回傳對應顯示名稱
+  nameForLocale(code) {
+    if (!code) return "";
+    const normalized = String(code).replace(/-/g, "_"); // en-US -> en_US
+    const base = normalized.split("_")[0]; // en_US -> en
+    return (
+      this.languageNames[normalized] ||
+      this.languageNames[base] ||
+      normalized
+    );
+  }
+
   get availableLocales() {
     const locales = this.siteSettings.content_localization_supported_locales;
     if (!locales) return [];
 
-    return locales.split("|").map(code => ({
-      code: code,
-      name: this.languageNames[code] || code
+    return locales.split("|").map((code) => ({
+      code,
+      name: this.nameForLocale(code),
     }));
   }
 
@@ -48,7 +60,7 @@ export default class CustomLanguageSwitcher extends Component {
   }
 
   get currentLocaleName() {
-    return this.languageNames[this.currentLocale] || this.currentLocale;
+    return this.nameForLocale(this.currentLocale);
   }
 
   // 🔄 轉址邏輯（統一處理）
