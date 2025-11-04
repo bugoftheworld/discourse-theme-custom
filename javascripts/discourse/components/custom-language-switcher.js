@@ -20,6 +20,8 @@ export default class CustomLanguageSwitcher extends Component {
     { value: "ai_discussion", name: "AI Discussion", url: "/c/en/ai/84" }
   ];
 
+  // 使用原生 ComboBox 的 filter，不需要本地 filter 狀態
+
   get availableLocales() {
     const locales = this.siteSettings.content_localization_supported_locales;
     if (!locales) return [];
@@ -30,12 +32,24 @@ export default class CustomLanguageSwitcher extends Component {
     }));
   }
 
+  // 提供給 ComboBox 的項目（包含固定按鈕）
+  get localeOptions() {
+    const options = this.availableLocales.map((l) => ({ id: l.code, name: l.name }));
+    const extras = this.fixedButtons.map((b) => ({ id: `link:${b.value}`, name: b.name, url: b.url }));
+    return [...options, ...extras];
+  }
+
   get currentLocale() {
     return I18n.currentLocale();
   }
 
   get currentLocaleName() {
     return this.languageNames[this.currentLocale] || this.currentLocale;
+  }
+
+  get currentLocaleOption() {
+    const code = this.currentLocale;
+    return { id: code, name: this.languageNames[code] || code };
   }
 
   // 🔄 轉址邏輯（統一處理）
@@ -67,5 +81,20 @@ export default class CustomLanguageSwitcher extends Component {
   @action
   navigateToUrl(url) {
     window.location.href = url;
+  }
+
+  @action
+  onSelect(item) {
+    if (!item) return;
+    const id = String(item.id);
+    if (id.startsWith("link:")) {
+      if (item.url) {
+        window.location.href = item.url;
+      } else {
+        window.location.href = window.location.origin;
+      }
+      return;
+    }
+    this.changeLocale(id);
   }
 }
