@@ -1,8 +1,10 @@
 <div class="custom-language-switcher">
   <ComboBox
     @content={{this.localeOptions}}
-    @value={{this.currentLocaleOption}}
+    @value={{this.currentLocaleId}}
     @onChange={{this.onSelect}}
+    @valueProperty="id"
+    @nameProperty="name"
     @options={{hash filterable=true allowInitialValueMutation=true}}
     class="language-switcher-combobox"
     as |cb|

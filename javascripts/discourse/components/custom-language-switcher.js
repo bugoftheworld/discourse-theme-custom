@@ -43,13 +43,12 @@ export default class CustomLanguageSwitcher extends Component {
     return I18n.currentLocale();
   }
 
-  get currentLocaleName() {
-    return this.languageNames[this.currentLocale] || this.currentLocale;
+  get currentLocaleId() {
+    return I18n.currentLocale();
   }
 
-  get currentLocaleOption() {
-    const code = this.currentLocale;
-    return { id: code, name: this.languageNames[code] || code };
+  get currentLocaleName() {
+    return this.languageNames[this.currentLocale] || this.currentLocale;
   }
 
   // 🔄 轉址邏輯（統一處理）
@@ -86,7 +85,7 @@ export default class CustomLanguageSwitcher extends Component {
   @action
   onSelect(item) {
     if (!item) return;
-    const id = String(item.id);
+    const id = typeof item === "string" ? item : String(item.id);
     if (id.startsWith("link:")) {
       if (item.url) {
         window.location.href = item.url;
