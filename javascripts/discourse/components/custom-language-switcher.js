@@ -6,7 +6,7 @@ export default class CustomLanguageSwitcher extends Component {
   @service currentUser;
   @service siteSettings;
 
-  // 🎨 自定義語言名稱
+  // 自定義語言名稱
   languageNames = {
     'zh_TW': '繁體中文',
     'en': 'English',
@@ -15,32 +15,19 @@ export default class CustomLanguageSwitcher extends Component {
     'id': 'Bahasa Indonesia',
   };
 
-  // 🔘 固定按鈕列表
+  // 固定按鈕列表
   fixedButtons = [
     { value: "ai_discussion", name: "AI Discussion", url: "/c/en/ai/84" }
   ];
 
   // 使用原生 ComboBox 的 filter，不需要本地 filter 狀態
-
-  // 將語言代碼正規化並回傳對應顯示名稱
-  nameForLocale(code) {
-    if (!code) return "";
-    const normalized = String(code).replace(/-/g, "_"); // en-US -> en_US
-    const base = normalized.split("_")[0]; // en_US -> en
-    return (
-      this.languageNames[normalized] ||
-      this.languageNames[base] ||
-      normalized
-    );
-  }
-
   get availableLocales() {
     const locales = this.siteSettings.content_localization_supported_locales;
     if (!locales) return [];
 
     return locales.split("|").map((code) => ({
       code,
-      name: this.nameForLocale(code),
+      name: this.languageNames[code] || code,
     }));
   }
 
@@ -60,10 +47,10 @@ export default class CustomLanguageSwitcher extends Component {
   }
 
   get currentLocaleName() {
-    return this.nameForLocale(this.currentLocale);
+    return this.languageNames[this.currentLocale] || this.currentLocale;
   }
 
-  // 🔄 轉址邏輯（統一處理）
+  // 轉址邏輯（統一處理）
   redirectToLocale(localeCode) {
     const domain = window.location.origin;
 
@@ -87,11 +74,6 @@ export default class CustomLanguageSwitcher extends Component {
       document.cookie = `locale=${localeCode};path=/;max-age=31536000`;
       this.redirectToLocale(localeCode);
     }
-  }
-
-  @action
-  navigateToUrl(url) {
-    window.location.href = url;
   }
 
   @action
