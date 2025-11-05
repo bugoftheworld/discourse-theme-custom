@@ -1,0 +1,65 @@
+.before-header-panel-outlet {
+  width: 70%;
+  display: flex;
+  justify-content: end;
+}
+
+// 自定義語言切換器樣式 - 下拉 Select 風格
+.custom-language-switcher-wrapper {
+  display: inline-flex;
+  align-items: center;
+
+  &.is-expanded {
+    .select-kit .select-kit-header:not(.btn) {
+      .select-kit-header-wrapper {
+        &:before {
+          transform: rotate(-135deg);
+          top: 4px;
+        }
+      }
+    }
+  }
+
+  .select-kit .select-kit-header:not(.btn) {
+    border: 0;
+    background: inherit;
+    .select-kit-header-wrapper {
+      position: relative;
+      padding-right: 1.5rem;
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-right: 1.5px solid #646464;
+        border-bottom: 1.5px solid #646464;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 0;
+        top: calc(50% - 8px);
+      }
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+// 移動端樣式調整
+@media screen and (max-width: 768px) {
+  .custom-language-switcher {
+    .language-switcher-dropdown .btn {
+      min-width: 120px;
+      padding: 0.4em 0.8em;
+      font-size: 0.85em;
+    }
+
+    .language-switcher-content {
+      min-width: 180px;
+    }
+  }
+}
+
+// 隱藏原生的 language-switcher（避免重複）
+button[data-identifier="language-switcher"] {
+  display: none !important;
+}
