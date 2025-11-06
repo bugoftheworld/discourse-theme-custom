@@ -31,8 +31,8 @@ body {
   }
 
   &.navigation-categories.categories-list {
-   .category .category-logo.aspect-image {
-        display: none;
+    .category .category-logo.aspect-image {
+      display: none;
     }
   }
 }
@@ -344,8 +344,10 @@ sup {
   }
 
   .topic-navigation {
-    @media screen and (max-width: 768px) {
-      display: none;
+    display: flex;
+    flex-wrap: wrap;
+    .btn{
+        margin-right: 12px;
     }
   }
   .post-translation {
