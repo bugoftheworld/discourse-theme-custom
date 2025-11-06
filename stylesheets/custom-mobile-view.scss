@@ -1,0 +1,13 @@
+html.mobile-view {
+  .discourse-theme--q {
+    .container.posts {
+      display: inherit;
+      flex-direction: inherit;
+    }
+  }
+}
+@media only screen and (orientation: landscape) {
+    html.mobile-view #main-outlet {
+      padding: 1.5em;
+    }
+  }
