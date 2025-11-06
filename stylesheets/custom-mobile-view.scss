@@ -1,12 +1,12 @@
-body.mobile-view {
+html.mobile-view {
   .discourse-theme--q {
     .container.posts {
       display: inherit;
     }
   }
-  @media only screen and (orientation: landscape) {
-    #main-outlet {
+}
+@media only screen and (orientation: landscape) {
+    html.mobile-view #main-outlet {
       padding: 1.5em;
     }
   }
-}
