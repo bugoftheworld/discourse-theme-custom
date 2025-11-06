@@ -344,7 +344,8 @@ sup {
   }
 
   .topic-navigation {
-    display: flex;
+    margin-bottom: .5rem;
+    display: flex !important;
     flex-wrap: wrap;
     .btn{
         margin-right: 12px;
