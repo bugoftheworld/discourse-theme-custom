@@ -28,6 +28,7 @@ export default class CustomLanguageSwitcher extends Component {
 
   get availableLocales() {
     const locales = this.siteSettings.content_localization_supported_locales;
+    console.log('availableLocales', locales);
     if (!locales) return [];
 
     const order = this.languageOrder;
