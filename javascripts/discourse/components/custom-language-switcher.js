@@ -33,8 +33,8 @@ export default class CustomLanguageSwitcher extends Component {
 
     const order = this.languageOrder;
     // 手動加上 en
-    locales = `${locales}|en`;
-    const list = locales
+    const localesWithEn = `${locales}|en`;
+    const list = localesWithEn
       .split("|")
       .filter(Boolean)
       .map((code, idx) => ({
