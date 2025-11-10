@@ -28,10 +28,13 @@ export default class CustomLanguageSwitcher extends Component {
 
   get availableLocales() {
     const locales = this.siteSettings.content_localization_supported_locales;
+
     if (!locales) return [];
 
     const order = this.languageOrder;
-    const list = locales
+    // 手動加上 en
+    const localesWithEn = `${locales}|en`;
+    const list = localesWithEn
       .split("|")
       .filter(Boolean)
       .map((code, idx) => ({
