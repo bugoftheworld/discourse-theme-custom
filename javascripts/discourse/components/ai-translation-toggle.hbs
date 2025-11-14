@@ -1,0 +1,23 @@
+{{#if this.showTranslationBanner}}
+  <div class="ai-translation-banner">
+    <div class="ai-translation-content">
+      <span class="ai-translation-message">
+        {{#if this.translationEnabled}}
+          {{theme-i18n "ai_translation.enabled_message"}}
+        {{else}}
+          {{theme-i18n "ai_translation.disabled_message"}}
+        {{/if}}
+      </span>
+      <button
+        class="btn btn-default ai-translation-toggle-btn"
+        {{on "click" this.toggleTranslation}}
+      >
+        {{#if this.translationEnabled}}
+          {{theme-i18n "ai_translation.switch_back_button"}}
+        {{else}}
+          {{theme-i18n "ai_translation.enable_button"}}
+        {{/if}}
+      </button>
+    </div>
+  </div>
+{{/if}}
