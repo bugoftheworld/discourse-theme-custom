@@ -1,10 +1,9 @@
 // AI Translation Banner Styles
 .ai-translation-banner {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #EEF3FF;
   border-radius: 8px;
   padding: 16px 20px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
   animation: slideDown 0.3s ease-out;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .ai-translation-message {
-  color: #ffffff;
+  color: #1c1c1c;
   font-size: 15px;
   line-height: 1.5;
   flex: 1;
@@ -45,9 +44,9 @@
 }
 
 .ai-translation-toggle-btn {
-  background: rgba(255, 255, 255, 0.95);
-  color: #667eea;
-  border: none;
+  background: transparent;
+  color: #4876DE;
+  outline: 1px solid #4876DE;
   padding: 10px 20px;
   border-radius: 6px;
   font-weight: 600;
@@ -55,12 +54,10 @@
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
   &:hover {
     background: #ffffff;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   &:active {
@@ -76,16 +73,17 @@
 // Dark mode adjustments
 .dark-mode {
   .ai-translation-banner {
-    background: linear-gradient(135deg, #5568d3 0%, #6942a0 100%);
-    box-shadow: 0 4px 12px rgba(85, 104, 211, 0.2);
+    background: #EEF3FF;
   }
 
   .ai-translation-toggle-btn {
-    background: rgba(255, 255, 255, 0.9);
-    color: #5568d3;
+    background: transparent;
+    color: #4876DE;
+    outline: 1px solid #4876DE;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.95);
+      color: #83a7fa;
+      outline: 1px solid #83a7fa;
     }
   }
 }
