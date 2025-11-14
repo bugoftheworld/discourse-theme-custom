@@ -450,6 +450,15 @@ sup {
       margin-left: auto;
     }
   }
+
+  .post-notice.new-user{
+    max-width: inherit;
+    margin-bottom: 20px;
+    border-radius: .5rem;
+    padding: 16px 20px;
+    border:0;
+    background: #eef3ff;
+  }
 }
 
 .desktop-view {
@@ -457,7 +466,7 @@ sup {
     .container.posts {
       .topic-area {
         .posts-wrapper {
-          margin-right:.5rem;
+          margin-right: 0.5rem;
         }
       }
     }
