@@ -1,12 +1,4 @@
 // AI Translation Banner Styles
-.ai-translation-banner {
-  background: #EEF3FF;
-  border-radius: 8px;
-  padding: 16px 20px;
-  margin-bottom: 20px;
-  animation: slideDown 0.3s ease-out;
-}
-
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -18,62 +10,71 @@
   }
 }
 
-.ai-translation-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
+.ai-translation-banner {
+  background: #eef3ff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  animation: slideDown 0.3s ease-out;
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-}
+  .ai-translation-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
 
-.ai-translation-message {
-  color: #1c1c1c;
-  font-size: 15px;
-  line-height: 1.5;
-  flex: 1;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
 
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
-  }
-}
+    .ai-translation-message {
+      color: #1c1c1c;
+      font-size: 15px;
+      line-height: 1.5;
+      flex: 1;
 
-.ai-translation-toggle-btn {
-  background: transparent;
-  color: #4876DE;
-  outline: 1px solid #4876DE;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
 
-  &:hover {
-    color: #83a7fa;
-    outline: 1px solid #83a7fa;
-  }
+    .ai-translation-toggle-btn {
+      background: transparent;
+      color: #4876de;
+      outline: 1px solid #4876de;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
 
-  &:active {
-    transform: translateY(0);
-  }
+      &:hover {
+        background: transparent;
+        color: #83a7fa;
+        outline: 1px solid #83a7fa;
+      }
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    text-align: center;
+      &:active {
+        transform: translateY(0);
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 }
 
 // Dark mode adjustments
 .dark-mode {
   .ai-translation-banner {
-    background: #EEF3FF;
+    background: #eef3ff;
   }
 
   .ai-translation-toggle-btn {
