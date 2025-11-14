@@ -345,12 +345,12 @@ sup {
 
   .topic-navigation {
     margin-left: 0 !important;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     display: flex !important;
     flex-wrap: wrap;
-    .btn{
-        margin-right: 12px;
+    .btn {
+      margin-right: 12px;
     }
   }
   .post-translation {
@@ -448,6 +448,18 @@ sup {
     flex-wrap: wrap;
     a {
       margin-left: auto;
+    }
+  }
+}
+
+.desktop-view {
+  .discourse-theme--q {
+    .container.posts {
+      .topic-area {
+        .post-wrapper {
+          margin-right:.5rem;
+        }
+      }
     }
   }
 }
