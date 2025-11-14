@@ -87,3 +87,8 @@ da:
     privacy_policy: "Privatlivspolitik"
     terms_of_service: "Servicevilkår"
     about: "Om"
+  ai_translation:
+    disabled_message: "Denne artikel tilbyder AI-oversættelse. Klik for at aktivere den."
+    enabled_message: "AI-oversættelse er aktiveret. Du ser automatisk oversat indhold."
+    enable_button: "AI-oversættelse"
+    switch_back_button: "Skift tilbage til originalsproget"

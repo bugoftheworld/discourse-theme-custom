@@ -88,4 +88,9 @@ de:
     privacy_policy: "Datenschutzrichtlinie"
     terms_of_service: "Nutzungsbedingungen"
     about: "Über"
+  ai_translation:
+    disabled_message: "Dieser Artikel bietet KI-Übersetzung. Klicken Sie hier, um sie zu aktivieren."
+    enabled_message: "KI-Übersetzung ist aktiviert. Sie sehen automatisch übersetzten Inhalt."
+    enable_button: "KI-Übersetzung"
+    switch_back_button: "Zur Originalsprache wechseln"
 

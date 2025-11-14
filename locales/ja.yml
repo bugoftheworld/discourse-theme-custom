@@ -72,3 +72,8 @@ ja:
     about: "概要"
   topic:
     create_ticket_label: "技術サポートチケットを作成する"
+  ai_translation:
+    disabled_message: "この記事にはAI翻訳が利用できます。クリックして有効にしてください。"
+    enabled_message: "AI翻訳が有効になっています。自動翻訳されたコンテンツを表示しています。"
+    enable_button: "AI翻訳"
+    switch_back_button: "元の言語に戻す"

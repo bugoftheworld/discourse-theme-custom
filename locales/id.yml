@@ -71,3 +71,8 @@ id:
     about: "Tentang"
   topic:
     create_ticket_label: "Buat Tiket Layanan"
+  ai_translation:
+    disabled_message: "Artikel ini menawarkan terjemahan AI. Klik untuk mengaktifkannya."
+    enabled_message: "Terjemahan AI diaktifkan. Anda melihat konten yang diterjemahkan secara otomatis."
+    enable_button: "Terjemahan AI"
+    switch_back_button: "Beralih kembali ke bahasa asli"

@@ -87,3 +87,8 @@ zh_CN:
     privacy_policy: "隐私政策"
     terms_of_service: "服务条款"
     about: "关于"
+  ai_translation:
+    disabled_message: "本文提供 AI 翻译。点击启用。"
+    enabled_message: "AI 翻译已开启,您现在看到的是自动翻译内容。"
+    enable_button: "AI 翻译"
+    switch_back_button: "切换回原语言"

@@ -87,3 +87,8 @@ pt:
     privacy_policy: "Política de Privacidade"
     terms_of_service: "Termos de Serviço"
     about: "Sobre"
+  ai_translation:
+    disabled_message: "Este artigo oferece tradução por IA. Clique para ativá-la."
+    enabled_message: "A tradução por IA está ativada. Você está vendo conteúdo traduzido automaticamente."
+    enable_button: "Tradução IA"
+    switch_back_button: "Voltar ao idioma original"

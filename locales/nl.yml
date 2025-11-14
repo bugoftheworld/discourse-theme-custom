@@ -87,3 +87,8 @@ nl:
     privacy_policy: "Privacybeleid"
     terms_of_service: "Servicevoorwaarden"
     about: "Over"
+  ai_translation:
+    disabled_message: "Dit artikel biedt AI-vertaling. Klik om het in te schakelen."
+    enabled_message: "AI-vertaling is ingeschakeld. U bekijkt automatisch vertaalde inhoud."
+    enable_button: "AI-vertaling"
+    switch_back_button: "Terug naar originele taal"

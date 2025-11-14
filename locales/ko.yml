@@ -87,3 +87,8 @@ ko:
     privacy_policy: "개인정보 보호정책"
     terms_of_service: "서비스 이용 약관"
     about: "정보"
+  ai_translation:
+    disabled_message: "이 문서는 AI 번역을 제공합니다. 클릭하여 활성화하세요."
+    enabled_message: "AI 번역이 활성화되었습니다. 자동 번역된 콘텐츠를 보고 있습니다."
+    enable_button: "AI 번역"
+    switch_back_button: "원본 언어로 전환"

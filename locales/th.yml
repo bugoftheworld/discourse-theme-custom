@@ -87,3 +87,8 @@ th:
     privacy_policy: "นโยบายความเป็นส่วนตัว"
     terms_of_service: "ข้อกำหนดในการให้บริการ"
     about: "เกี่ยวกับ"
+  ai_translation:
+    disabled_message: "บทความนี้มีการแปลด้วย AI คลิกเพื่อเปิดใช้งาน"
+    enabled_message: "เปิดใช้งานการแปลด้วย AI แล้ว คุณกำลังดูเนื้อหาที่แปลโดยอัตโนมัติ"
+    enable_button: "แปลด้วย AI"
+    switch_back_button: "เปลี่ยนกลับเป็นภาษาต้นฉบับ"

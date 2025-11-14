@@ -87,3 +87,8 @@ hu:
     privacy_policy: "Adatvédelmi Szabályzat"
     terms_of_service: "Szolgáltatási Feltételek"
     about: "Rólunk"
+  ai_translation:
+    disabled_message: "Ez a cikk AI fordítást kínál. Kattintson az engedélyezéshez."
+    enabled_message: "Az AI fordítás engedélyezve van. Automatikusan lefordított tartalmat néz."
+    enable_button: "AI fordítás"
+    switch_back_button: "Váltás az eredeti nyelvre"
