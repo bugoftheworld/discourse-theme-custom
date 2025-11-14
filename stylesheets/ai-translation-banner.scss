@@ -56,8 +56,8 @@
   white-space: nowrap;
 
   &:hover {
-    background: #ffffff;
-    transform: translateY(-1px);
+    color: #83a7fa;
+    outline: 1px solid #83a7fa;
   }
 
   &:active {
@@ -78,12 +78,12 @@
 
   .ai-translation-toggle-btn {
     background: transparent;
-    color: #4876DE;
-    outline: 1px solid #4876DE;
+    color: aqua;
+    outline: 1px solid aqua;
 
     &:hover {
-      color: #83a7fa;
-      outline: 1px solid #83a7fa;
+      color: rgb(0, 191, 191);
+      outline: 1px solid rgb(0, 191, 191);
     }
   }
 }
