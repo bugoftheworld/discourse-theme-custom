@@ -71,3 +71,8 @@ en:
     about: "About"
   topic:
     create_ticket_label: "Create Service Ticket"
+  ai_translation:
+    disabled_message: "This article offers AI translation. Click to enable it."
+    enabled_message: "AI translation is enabled. You are viewing automatically translated content."
+    enable_button: "AI Translate"
+    switch_back_button: "Switch to Original"

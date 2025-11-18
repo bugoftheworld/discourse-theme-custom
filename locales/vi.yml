@@ -87,3 +87,8 @@ vi:
     privacy_policy: "Chính sách bảo mật"
     terms_of_service: "Điều khoản dịch vụ"
     about: "Về chúng tôi"
+  ai_translation:
+    disabled_message: "Bài viết này cung cấp dịch AI. Nhấp để kích hoạt."
+    enabled_message: "Dịch AI đã được kích hoạt. Bạn đang xem nội dung được dịch tự động."
+    enable_button: "Dịch AI"
+    switch_back_button: "Chuyển về ngôn ngữ gốc"

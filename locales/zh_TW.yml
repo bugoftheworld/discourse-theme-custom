@@ -71,3 +71,8 @@ zh_TW:
     about: "關於"
   topic:
     create_ticket_label: "建立技術服務支援單"
+  ai_translation:
+    disabled_message: "此文章提供 AI 翻譯。點擊以啟用。"
+    enabled_message: "AI 翻譯已開啟，您現在看到的是自動翻譯內容。"
+    enable_button: "AI 翻譯"
+    switch_back_button: "切換回原語系"

@@ -87,3 +87,8 @@ tr_TR:
     privacy_policy: "Gizlilik Politikası"
     terms_of_service: "Hizmet Şartları"
     about: "Hakkında"
+  ai_translation:
+    disabled_message: "Bu makale AI çevirisi sunuyor. Etkinleştirmek için tıklayın."
+    enabled_message: "AI çevirisi etkinleştirildi. Otomatik olarak çevrilmiş içeriği görüntülüyorsunuz."
+    enable_button: "AI Çevirisi"
+    switch_back_button: "Orijinal dile dön"

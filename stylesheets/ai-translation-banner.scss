@@ -1,0 +1,90 @@
+// AI Translation Banner Styles
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai-translation-banner {
+  background: #eef3ff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  animation: slideDown 0.3s ease-out;
+
+  .ai-translation-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .ai-translation-message {
+      color: #1c1c1c;
+      font-size: 15px;
+      line-height: 1.5;
+      flex: 1;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+
+    .ai-translation-toggle-btn {
+      background: transparent;
+      color: #4876de;
+      outline: 1px solid #4876de;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+
+      &:hover {
+        background: transparent;
+        color: #2a68f9;
+        outline: 1px solid #2a68f9;
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Dark mode adjustments
+.dark-mode {
+  .ai-translation-banner {
+    background: #eef3ff;
+  }
+
+  .ai-translation-toggle-btn {
+    background: transparent;
+    color: aqua;
+    outline: 1px solid aqua;
+
+    &:hover {
+      color: rgb(0, 191, 191);
+      outline: 1px solid rgb(0, 191, 191);
+    }
+  }
+}

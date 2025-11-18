@@ -87,3 +87,8 @@ sv:
     privacy_policy: "Integritetspolicy"
     terms_of_service: "Tjänstevillkor"
     about: "Om"
+  ai_translation:
+    disabled_message: "Den här artikeln erbjuder AI-översättning. Klicka för att aktivera den."
+    enabled_message: "AI-översättning är aktiverad. Du tittar på automatiskt översatt innehåll."
+    enable_button: "AI-översättning"
+    switch_back_button: "Byt tillbaka till originalspråk"
